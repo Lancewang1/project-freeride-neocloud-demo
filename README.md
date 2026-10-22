@@ -1,31 +1,34 @@
-# PROJECT FREERIDE · Neocloud Research Demo
+# PROJECT FREERIDE · Neocloud 深度投研 DEMO
 
-公开演示：**https://lancewang1.github.io/project-freeride-neocloud-demo/**
+公开网页：**https://lancewang1.github.io/project-freeride-neocloud-demo/**
 
-首页是一份完整的 **CoreWeave 投资案例**，逐层展示需求、合同、交付、单位经济、现金、信用、股东价值和历史信号检验。每层都有数据、验证、分析、结论、投资含义和证伪条件。原始数据看板保留在 `dashboard.html`。
+首页完整覆盖需求、业务获取、交付、单位经济/现金、债务时间表和同业估值。每层有数据、来源、分析、验证、结论和投资含义。研究截止2026-10-22；估值采用10/21收盘，财报截至6/30，融资核实到9/22，信用报道到10/21。事件行情序列截至10/20，与估值报价分列。
 
 ## 内容
 
-- `index.html`：完整CoreWeave研究案例与交互压力情景，无外部前端依赖。
-- `coreweave-case.md` / `data/coreweave-case.json`：文字版与结构化案例。
-- `data/coreweave-case-calculations.json`：SEC数值、计算与口径。
-- `dashboard.html`：原始数据、覆盖与事件研究看板。
-- `data/observations.json`：规范化观测与来源URL。
-- `data/event-study.json`：逐事件历史检验、方法及限制。
-- `references/`：研究框架、审计、来源书目、数据获取路径。
+- `index.html`：完整研究首页；`coreweave-deep-dive.md`：文字与图表版。
+- `data/deep-research.json`：15条Anthropic公司run-rate观测/重复/回溯/预测、产品与实际收入、六季CRWV数据、同业预测、债务日程、价格和来源哈希。
+- `data/deep-analysis.json`：300个事件×股票×基准×窗口结果及60组相关检验，不是300个独立事件。
+- `scripts/analyze_deep_case.py`：重算Pearson、Spearman、精确置换p、Holm及留一法。
+- `scripts/render_deep_case.py`：从已审核数据重建首页。
+- `scripts/refresh_evidence.py`：公开网页采集及待审队列，原文只保存在忽略的本地缓存。
+- `references/deep-dive-protocol.md`：探索性检验登记；`references/`含原研报出处、机构框架及审计。
+- `dashboard.html`：原数据看板；`case-v1.html`：上一版存档，口径更正以新首页为准。
 
-## 数据与更新
+## 本地重算与更新
 
-完整案例研究截止2026-10-22，财务期间截至2026-06-30，信用数据为10月15/21日媒体报道，非实时终端报价。旧数据看板采集日期为2026-10-21，各指标实际期间与披露日期分别显示；12/30类指标有部分观测或代理，其余保留明确缺口。网页重新加载不会运行爬虫；维护端完成采集、语义复核和检验后发布新版本。
+依赖：`pip install numpy scipy markdown requests beautifulsoup4`。
 
-GitHub Pages 从 `main` 分支根目录部署。无API密钥、无服务器账户、无交易执行功能。原始研究PDF、原始网页存档和本地路径不进入公开仓库。第三方来源内容及权利归其各自所有者，出处不代表其认可本项目。
+1. `python scripts/refresh_evidence.py --scope anthropic`：全官网新闻发现、哈希、候选收入段落；可选`financial`或`all`。
+2. 复核实际/预测、公司/产品、所属期/披露时间、下界/点值后更新`data/deep-research.json`。新页面不能未经复核成为历史事件。
+3. `python scripts/analyze_deep_case.py`：重算全部预定窗口，不择优发布。
+4. `python scripts/render_deep_case.py`：重建首页；叙述结论须与新计算核对，脚本不会自行完成投研判断。
+5. `python -m http.server 8000`预览；检查后提交main，由GitHub Pages部署。
 
-## 研究边界
+本页是已审核快照。网页刷新不会运行爬虫；未安装无人值守定时任务。原始研报PDF、整篇新闻、凭据和本地路径不进入公开仓库。
 
-框架是研究工具，不是已验证的预测模型。初次NBIS实际ARR增幅与公告后5日相对QQQ回报的6个事件相关系数约−0.37，p约0.50；不能据此宣称正向或负向交易规律。具体时点处理、口径变化、样本缺失和混杂说明见看板与审计。
+## 结论与边界
 
-CoreWeave案例当前结论为条件观察、融资先行。收入增长有报表支持，现金建设需求与信用压力显著；尚未验证完整流动性、项目ROIC和融资后每股估值，不提供伪精确目标价，也不认定已经违约。案例的步骤完整不代表所有投资尽调已经完成。
+CRWV 2027E收入倍数低于NBIS，但未来资本结构、折旧后利润和稀释决定每股回报。RPO近24个月兑现额增长快于总RPO；Q2现金质量弱于EBITDA。融资表区分实际提款、未提款承诺和9月可转债净额；情景不等于当前现金余额。
 
-## 本地预览
-
-直接打开 `index.html`，或运行 `python -m http.server 8000` 后访问 `http://localhost:8000`。
+Anthropic官网扫描276篇新闻。核心相关检验只有5个官方新高事件、4个增幅配对；CRWV六季构成5个变化配对。结果不支持已验证交易规则。全行业统一RPO分母、Anthropic正式卖方调查共识、下次正式ARR公告日、逐GPU项目数据仍未取得；不制造数据或用不匹配口径替代。

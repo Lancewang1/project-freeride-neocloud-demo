@@ -1,0 +1,42 @@
+const D=JSON.parse(document.getElementById('researchData').textContent),A=JSON.parse(document.getElementById('analysisData').textContent);
+const $=s=>document.querySelector(s),pct=x=>x==null?'—':(x*100).toFixed(2)+'%',n=x=>x==null?'—':x.toFixed(3),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const link=(k)=>'<a href="'+esc(D.sources[k].url)+'" target="_blank" rel="noopener">来源</a>';
+function table(head,rows){return '<div class="tablewrap"><table><thead><tr>'+head.map(x=>'<th>'+x+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(x=>'<td>'+x+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>'}
+function anthroChart(){
+ const axis=$('#anthroAxis').value,rows=D.anthropic.filter(x=>x[axis]&&x.kind!=='重复披露'&&x.kind!=='媒体重复'&&x.kind!=='研究机构估计');
+ const date=x=>new Date((axis==='period'?x.period+'-01':x.published)+'T00:00:00Z').getTime();
+ const min=Math.min(...rows.map(date)),max=Math.max(...rows.map(date)),xx=x=>65+(date(x)-min)/(max-min)*810,yy=v=>250-v/110*215;
+ let s='<h3>Anthropic公司run-rate：'+(axis==='period'?'所属期视角（不用于回测）':'披露视角（历史回溯独立标注）')+'</h3><svg viewBox="0 0 920 310" role="img" aria-label="Anthropic historical run-rate"><text x="10" y="18" fill="#9eafc4" font-size="12">USD B</text>';
+ for(let v=0;v<=100;v+=25)s+='<path d="M65 '+yy(v)+'H875" stroke="#29394b"/><text x="50" y="'+(yy(v)+4)+'" text-anchor="end" fill="#9eafc4" font-size="12">'+v+'</text>';
+ const official=rows.filter(x=>x.event).sort((a,b)=>date(a)-date(b));
+ s+='<polyline points="'+official.map(x=>xx(x)+','+yy(x.value)).join(' ')+'" fill="none" stroke="#58dfbb" stroke-width="2" stroke-dasharray="4 4"/>';
+ for(const x of rows){const color=x.kind.includes('预期')?'#ffc475':x.kind.includes('媒体')?'#8faeff':x.kind.includes('回溯')?'#9eafc4':'#58dfbb';s+='<circle cx="'+xx(x)+'" cy="'+yy(x.value)+'" r="5" fill="'+color+'"><title>'+esc(x.period+' / 披露 '+x.published+' / '+x.value+'B / '+x.kind)+'</title></circle><text x="'+xx(x)+'" y="'+(yy(x.value)-10)+'" text-anchor="middle" fill="'+color+'" font-size="12">'+x.value+'</text>'}
+ for(let i=0;i<5;i++){const t=min+(max-min)*i/4,tx=65+i*810/4;s+='<text x="'+tx+'" y="280" text-anchor="middle" fill="#9eafc4" font-size="12">'+new Date(t).toISOString().slice(0,7)+'</text>'}
+ s+='</svg><div class="legend"><span style="color:#58dfbb">● 官方新高</span><span style="color:#9eafc4">● 事后回溯</span><span style="color:#8faeff">● 媒体</span><span style="color:#ffc475">● 预测（非实际）</span></div><p class="small">悬停查看双时间戳。图不将未知期间插值为实测值；100B为年末报道预期，不是已实现run-rate。</p>';
+ $('#anthroChart').innerHTML=s;
+}
+$('#anthroAxis').addEventListener('change',anthroChart);anthroChart();
+const metricNames={Anthropic:'Anthropic整体run-rate',rpo:'CRWV RPO',backlog:'CRWV backlog',revenue:'CRWV收入',active_mw:'CRWV active MW',ebitda_margin:'CRWV EBITDA率',cash_margin:'CRWV CFO率',capex_intensity:'CRWV现金Capex强度'};
+$('#eventExplorer').innerHTML='<div class="controls"><label>解释变量<select id="eventSeries">'+Object.entries(metricNames).map(([v,l])=>'<option value="'+v+'">'+l+'</option>').join('')+'</select></label><label>股票<select id="eventSymbol"><option>CRWV</option><option>NBIS</option><option>IREN</option></select></label><label>基准<select id="eventBench"><option>QQQ</option><option>SMH</option></select></label><label>窗口<select id="eventH"><option value="1">1日反应</option><option value="5" selected>5日反应</option><option value="20">20日反应</option></select></label></div><div id="eventStats"></div><div id="eventTable"></div>';
+function events(){
+ const series=$('#eventSeries').value,sym=$('#eventSymbol');sym.disabled=series!=='Anthropic';if(sym.disabled)sym.value='CRWV';
+ const b=$('#eventBench').value,h=Number($('#eventH').value),rows=A.events.filter(e=>e.series===series&&e.symbol===sym.value&&e.benchmark===b&&e.horizon===h),st=A.summary.find(e=>e.series===series&&e.symbol===sym.value&&e.benchmark===b&&e.horizon===h);
+ $('#eventStats').innerHTML='<div class="statgrid">'+[['增长/变化配对样本',st.n],['Pearson',n(st.pearson)],['Spearman',n(st.rho)],['精确置换p',n(st.p)],['同指标Holm p',n(st.p_holm)],['全检验Holm p',n(st.p_holm_all)]].map(([l,v])=>'<div><small>'+l+'</small><strong>'+v+'</strong></div>').join('')+'</div><p class="small">变化幅度为增速或利润率/强度百分点变动；首个Anthropic披露没有可比前值，不进入相关系数。表中1日窗口在未知发布小时下可能包含两个交易日；起止日为准。模型异常收益为股票复利收益减事前alpha/beta模型预期复利收益。</p>';
+ $('#eventTable').innerHTML=table(['披露日','指标变化','价格窗口','原始收益','基准相减','市场模型异常收益','事前beta / n','标准化反应','证据'],rows.map(e=>[e.date,pct(e.change),e.anchor+' → '+e.exit,pct(e.raw),pct(e.excess),'<b class="'+(e.car>=0?'positive':'negative')+'">'+pct(e.car)+'</b>',n(e.beta)+' / '+e.training_n,n(e.z)+'σ',link(e.source)]));
+}
+['#eventSeries','#eventSymbol','#eventBench','#eventH'].forEach(s=>$(s).addEventListener('change',events));events();
+function input(id,label,value,min,max,step){return '<label>'+label+'<input id="'+id+'" type="number" value="'+value+'" min="'+min+'" max="'+max+'" step="'+step+'"></label>'}
+$('#cashModel').innerHTML='<div class="controls">'+input('cashDraw','H2原/新额度兑现率 %',100,20,100,5)+input('cashCfo','H2 CFO $B',3.663,-5,30,.1)+input('cashCapex','H2现金PP&E $B',14.117,0,60,.1)+input('cash2027Cfo','2027 CFO $B',8,-10,50,.5)+input('cash2027Capex','2027现金PP&E $B',20,0,100,1)+input('cash2027Finance','2027额外融资 $B',20,0,100,1)+'</div><div id="cashOutput"></div><button id="cashStress">联合压力：80%提款、H2 Capex +25%</button><button id="cashReset">恢复基准</button>';
+function cash(){
+ const rate=Number($('#cashDraw').value)/100,cfo=Number($('#cashCfo').value),cap=Number($('#cashCapex').value),old=10.014*rate,add=2.6*rate,begin=5.539,other=1.15,fees=.05,conv=3.5708;
+ const end=begin+cfo+old+add+conv-cap-4.413-.012-other-fees;
+ const cfo27=Number($('#cash2027Cfo').value),cap27=Number($('#cash2027Capex').value),fin27=Number($('#cash2027Finance').value),end27=end+cfo27+fin27-cap27-6.184-.223-1;
+ $('#cashOutput').innerHTML=table(['资金桥 $B','2026H2','2027（新增融资/支出为情景）'],[['期初现金及证券',n(begin),n(end)],['经营现金流（含经营利息/租金/预付款）',n(cfo),n(cfo27)],['旧融资额度提款（含8月RCF）',n(old),'—'],['8月新增DDTL额度提款（含已提款1.2）',n(add),'—'],['9月可转债净额，扣capped call',n(conv),'—'],['未来新增融资','—',n(fin27)],['现金PP&E付款',n(-cap),n(-cap27)],['6月底存量债务本金',n(-4.413),n(-6.184)],['融资租赁付款保守储备',n(-.012),n(-.223)],['JV/其他现金用途及融资费用',n(-other-fees),'-1.000'],['条件期末现金','<b class="'+(end<2?'negative':'positive')+'">'+n(end)+'</b>','<b class="'+(end27<2?'negative':'positive')+'">'+n(end27)+'</b>']])+'<div class="result">基准最低运营现金假设 $2B：H2资金缺口 <strong>'+n(Math.max(0,2-end))+'B</strong>；2027资金缺口 <strong>'+n(Math.max(0,2-end27))+'B</strong>。<p class="small">金额为情景差额，不是已发生支付违约。若2026年末为负，2027负数承接表示累计未解决缺口，并非允许公司以负现金继续经营。提款不足不改变已提款事实，只模拟全年额度兑现上限；实际8月已提款至少2.4B。</p></div>';
+}
+document.querySelectorAll('#cashModel input').forEach(e=>e.addEventListener('input',cash));$('#cashStress').onclick=()=>{$('#cashDraw').value=80;$('#cashCapex').value=(14.117*1.25).toFixed(5);cash()};$('#cashReset').onclick=()=>{$('#cashDraw').value=100;$('#cashCfo').value=3.663;$('#cashCapex').value=14.117;$('#cash2027Cfo').value=8;$('#cash2027Capex').value=20;$('#cash2027Finance').value=20;cash()};cash();
+$('#valuationModel').innerHTML='<div class="controls">'+input('valMargin','2027 EBIT率 %（租金后）',20,1,60,1)+input('valMultiple','2027退出EV/EBIT ×',15,1,40,1)+input('valDebt','一年后净债务 $B（不含经营租赁）',45,0,100,1)+input('valShares','一年后股数 million',600,551.54,1000,10)+input('valReturn','一年要求回报 %',12,0,40,1)+'</div><div id="valOutput"></div>';
+function valuation(){
+ const m=Number($('#valMargin').value)/100,mult=Number($('#valMultiple').value),nd=Number($('#valDebt').value),sh=Number($('#valShares').value)/1000,r=Number($('#valReturn').value)/100,ev=61.82*sh*(1+r)+nd,rev=ev/(m*mult),fair=Math.max(0,(26.34*m*mult-nd)/sh);
+ $('#valOutput').innerHTML='<div class="result">达到要求回报需要2027收入 <strong>$'+rev.toFixed(2)+'B</strong>；较2026共识增长 <strong>'+pct(rev/12.87-1)+'</strong>；较2027共识偏差 <strong>'+pct(rev/26.34-1)+'</strong>。<p>若收入等于2027共识26.34B，一年后每股条件值为 <strong>$'+fair.toFixed(2)+'</strong>，相对现价回报 '+pct(fair/61.82-1)+'；支持要求回报的EBIT率需 '+pct(ev/(26.34*mult))+'。</p></div>'+table(['所需2027收入 $B / EV/EBIT','12×','15×','18×'],[.15,.20,.25,.30].map(mg=>[(mg*100)+'% EBIT率',...([12,15,18].map(k=>(ev/(mg*k)).toFixed(2)))]))+'<p class="small">分母改变的是可持续EBIT率，不能把未经统一折旧的调整后利润率直接套入。股数假设反映融资/SBC情景；净债务与股数必须联动，不在此默认转换所有可转债。若反推收入不合理，先审查利润率、资本结构和退出倍数，不将反推值称为已观察共识。</p>';
+}
+document.querySelectorAll('#valuationModel input').forEach(e=>e.addEventListener('input',valuation));valuation();
