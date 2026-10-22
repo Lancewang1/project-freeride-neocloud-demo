@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FREERIDE Research</title><style>body{max-width:1100px;margin:40px auto;padding:0 24px;background:#0b1422;color:#e8eff8;font:16px/1.8 system-ui,sans-serif}a{color:#5fe1c3}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:12px;border:1px solid #314863;min-width:140px}pre,code{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #efc776;margin-left:0;padding-left:16px}</style><a href="../index.html">← 返回看板</a><h1>探索性检验协议 v1</h1>
+<p>冻结时点：首次读取股价序列和计算收益之前。已查看官方网页的经营披露，但未查看收益结果。这是内部事前分析计划，不是第三方注册实验。样本截止 2026-10-21，排除当日尚未完成的美股日线。</p>
+<p>H1：Anthropic 官方披露公司整体 run-rate revenue 新高之后，CRWV、NBIS、IREN 的等权可交易组合有正的后续 QQQ 超额收益。网页日期没有可靠小时，统一从披露日之后的首个交易日收盘起算，考察随后 1/5/20 个交易日；主检验为 5 日。该口径遗漏即时反应，只检验保守可得信息之后的漂移。旧年份收入的回顾不回填为当时已知。融资伴随披露是混杂，不能因果归因于 ARR。</p>
+<p>H2：Nebius 的同口径季度收入环比增长与上述 5 日超额收益正相关。只用公司重组后季度，首次公告日期来自官网，不以 SEC 较晚报送日期替代首次披露。ARR 数据若无法系统提取则单独列缺口，不把收入替换后仍称 ARR 检验。主统计为 Spearman；1/20 日为敏感性。</p>
+<p>H3（条件允许）：Nebius 同口径实际 ARR 增长与后续超额收益正相关；指引、潜在产能 ARR 不得混入实际值。缺少足够实际值或可比性时明确不估计。</p>
+<p>统计：样本少于 6 个独立事件不报告显著性；足够时做固定种子 10000 次置换检验及事件层面 bootstrap 均值区间，展示逐事件结果、留一法范围与按时间前后半段。对两个主要可估计假设作 Holm 修正；三种期限不择优宣传。披露收益窗重叠；重叠时去重敏感性，只保留最早事件。QQQ 主基准，SMH 稳健性；不用股票价格水平和收入水平回归。仅探索，不以短样本宣布 alpha，不进行自动交易。</p>
+<p>边界：官网当前网页是回溯恢复的日期而非当时封存页面，因此仍有修订风险；行情后复权与供应商修订也保留风险。没有历史一致预期，不声称测试了盈利意外。不能做可信 OOS 的情况必须说明。任何后来新增测试单独标记探索。</p></html>

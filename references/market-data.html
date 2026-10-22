@@ -1,0 +1,429 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FREERIDE Research</title><style>body{max-width:1100px;margin:40px auto;padding:0 24px;background:#0b1422;color:#e8eff8;font:16px/1.8 system-ui,sans-serif}a{color:#5fe1c3}table{border-collapse:collapse;display:block;overflow:auto}td,th{padding:12px;border:1px solid #314863;min-width:140px}pre,code{white-space:pre-wrap;overflow-wrap:anywhere}blockquote{border-left:3px solid #efc776;margin-left:0;padding-left:16px}</style><a href="../index.html">← 返回看板</a><h1>行业关键数据：看什么、去哪找、怎样影响投资</h1>
+<p>本清单由用户指定指标、机构原文议题和FREERIDE补充构成。<strong>30项指标的优先级是研究工作设计，不是对今天市场注意力的实测排名。</strong> 不提供未经采集的最新数值。P0=默认核心面板；P1=解释变化/验证机制；P2=尽调与估值补充。专题研究可调整优先级，例如融资事件直接提升M18/M27。</p>
+<p>使用前先阅读<a href="sources.html">sources.md</a>与<a href="institutional-frameworks.html">institutional-frameworks.md</a>。机器可读字段见<code>../assets/metric-registry.json</code>；逐条观察的空白模板见<code>../assets/observation-template.json</code>。</p>
+<h2>先看四组核心问题</h2>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>默认重点</th>
+<th>要回答的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>终端付费需求</td>
+<td>M01–M04</td>
+<td>AI应用是否真正赚到钱？增长来自量、价格还是组合？</td>
+</tr>
+<tr>
+<td>算力投资与订单</td>
+<td>M05–M06、M11</td>
+<td>谁会采购？哪家供应商受益？合同金额有多确定？</td>
+</tr>
+<tr>
+<td>价格与交付</td>
+<td>M07–M09、M12</td>
+<td>供需是否仍紧？交付/验收能否变成计费？</td>
+</tr>
+<tr>
+<td>资金可持续性</td>
+<td>M10</td>
+<td>建设、采购和偿债能否被真实现金来源覆盖？</td>
+</tr>
+</tbody>
+</table>
+<h2>30张指标卡</h2>
+<h3>M01｜Anthropic ARR / 年化收入｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>终端付费意愿及算力采购可持续性。</li>
+<li><strong>口径：</strong>按原披露分别记录ARR、annualized revenue run-rate和已确认收入，USD/年；保存基准月份、企业/API/订阅构成。</li>
+<li><strong>频率与时滞：</strong>事件；每周检查新披露；对算力合同可能领先，时滞不固定。</li>
+<li><strong>第一获取路径：</strong>Anthropic官方经营/融资公告与管理层原话；有授权的投资者材料。</li>
+<li><strong>降级路径：</strong>可信媒体原始采访，标为媒体转述；未披露则空值。</li>
+<li><strong>投资传导：</strong>先核验付费增长，再看算力支出/采购方/供应商归属；无供货证明只作行业信号。</li>
+<li><strong>常见误读：</strong>不能月收入乘12后叫经常性ARR；不能将增速同比例传给CRWV或光模块。</li>
+<li><strong>选取依据：</strong>用户指定；F5/F6为解释框架，非原文直接指标。类型：USER+NEW。</li>
+</ul>
+<h3>M02｜OpenAI及其他主要AI客户商业化收入｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>避免用单一模型公司的增长代表行业。</li>
+<li><strong>口径：</strong>区分已确认收入、年化run-rate、企业/API收入、合同订单、付费席位；同币种同口径。</li>
+<li><strong>频率与时滞：</strong>事件；月度整理；终端需求指标，不保证领先。</li>
+<li><strong>第一获取路径：</strong>公司官方经营公告、合作方披露、上市模型公司财报。</li>
+<li><strong>降级路径：</strong>可信媒体或机构预测分层存储。</li>
+<li><strong>投资传导：</strong>检验客户现金承受力和需求广度；按已证实客户关系映射。</li>
+<li><strong>常见误读：</strong>收入、融资额、采购承诺不能加总；不把API代理交易总额当净收入。</li>
+<li><strong>选取依据：</strong>S2 p.4/10/12；S3 p.4–5；具体监测对象为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M03｜付费Token量、任务量与工作负载组合｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>分辨收入增长来自真实使用还是涨价/补贴。</li>
+<li><strong>口径：</strong>按模型/渠道/模态分输入、输出、缓存Token；尽量记录成功任务、付费占比；不可比模态不直接相加。</li>
+<li><strong>频率与时滞：</strong>周度代理；季度披露；通常同步，平台样本可能提前。</li>
+<li><strong>第一获取路径：</strong>模型公司披露；OpenRouter可用公开统计；企业付费使用披露。</li>
+<li><strong>降级路径：</strong>第三方样本；保留覆盖模型和渠道变化。</li>
+<li><strong>投资传导：</strong>决定GPU小时的需求侧输入；拆量、价格、组合贡献。</li>
+<li><strong>常见误读：</strong>OpenRouter不是全行业份额；免费流量、缓存读Token不等于同等算力消耗。</li>
+<li><strong>选取依据：</strong>S2 p.4–8；S3 p.4–5。类型：DISTILL。</li>
+</ul>
+<h3>M04｜有效API价格，而非仅标价｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>终端变现与价格战直接改变支付算力成本的能力。</li>
+<li><strong>口径：</strong>USD/百万Token；拆输入/输出/缓存读写、批处理折扣、长上下文、地区、净折扣、模态。</li>
+<li><strong>频率与时滞：</strong>产品发布/调价时；每周快照；对收入/毛利较领先。</li>
+<li><strong>第一获取路径：</strong>各模型官方API价目表及合同净价（如用户提供）。</li>
+<li><strong>降级路径：</strong>OpenRouter报价作为零售代理。</li>
+<li><strong>投资传导：</strong>进入F5 Rev/Mtok；租金涨价能否向终端传导。</li>
+<li><strong>常见误读：</strong>标价不等于成交价；D_kv=20%代表付20%原价。</li>
+<li><strong>选取依据：</strong>S2 p.4–7/13。类型：DISTILL。</li>
+</ul>
+<h3>M05｜Hyperscaler AI投入与自建/外租选择｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>大客户既是需求来源也是潜在竞争者。</li>
+<li><strong>口径：</strong>Microsoft/Amazon/Alphabet/Meta等Capex及指引，分现金/融资租赁、AI/非AI、土建/设备；外租合同另列。</li>
+<li><strong>频率与时滞：</strong>季度财报与重大合同事件；支出/订单领先交付，财务披露滞后。</li>
+<li><strong>第一获取路径：</strong>公司IR、SEC财报、公开业绩会与采购公告。</li>
+<li><strong>降级路径：</strong>机构拆分估计，标估计范围。</li>
+<li><strong>投资传导：</strong>提高或降低第三方可服务市场；对行业和单家公司影响可相反。</li>
+<li><strong>常见误读：</strong>总Capex不是GPU租赁预算；云收入含非AI；上下游支出不能相加成终端需求。</li>
+<li><strong>选取依据：</strong>S1 p.2/7；S4 p.18–20；Capex字段拆分为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M06｜新增合同、backlog、RPO及转化｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>订单质量与交付可见度通常比标题金额更重要。</li>
+<li><strong>口径：</strong>每笔合同固定额/上限/backstop/可选额、期限、起租、取消条款、当期RPO、未来12月履约额；USD。</li>
+<li><strong>频率与时滞：</strong>事件更新；季度核对余额；领先收入，不必领先股价。</li>
+<li><strong>第一获取路径：</strong>SEC合同附件、收入确认脚注、公司IR合同公告。</li>
+<li><strong>降级路径：</strong>机构合同表作为查找线索。</li>
+<li><strong>投资传导：</strong>决定交付批次、收入节奏、客户信用和项目融资条件。</li>
+<li><strong>常见误读：</strong>不同backlog定义不可直接比较；公告额不是RPO；不能把多年的合同额当年收入。</li>
+<li><strong>选取依据：</strong>S1 p.3–4/7–9，Exhibits 2/10–14。类型：DISTILL。</li>
+</ul>
+<h3>M07｜电力储备到AI可用IT MW的转化｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>能否按期交付是算力云供给约束。</li>
+<li><strong>口径：</strong>按site记录secured/contracted/energized/AI-ready/IT MW、日期、总设施MW或IT MW、矿业占比。</li>
+<li><strong>频率与时滞：</strong>项目事件；季度；领先计费收入。</li>
+<li><strong>第一获取路径：</strong>公司项目披露、电力公司/并网/建设文件。</li>
+<li><strong>降级路径：</strong>机构项目表；卫星/施工线索不能代替验收。</li>
+<li><strong>投资传导：</strong>影响交付日期、建设Capex、潜在赔偿与资金占用。</li>
+<li><strong>常见误读：</strong>已签电力≠已通电；设施MW≠IT MW；挖矿容量不等于AI-ready。</li>
+<li><strong>选取依据：</strong>S1 p.2/5–6，Exhibits 3–6；进度细化为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M08｜同配置GPU租赁净价与期限曲线｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>租金决定单位资产回报，是供需与竞争的价格信号。</li>
+<li><strong>口径：</strong>USD/GPU-hour，固定SKU/显存/互联/地域/SLA，区分按需/spot/1年/多年，计费小时与实际使用小时分开。</li>
+<li><strong>频率与时滞：</strong>每周同篮子；合同事件；新价格领先新签/续约毛利，旧合同受条款约束。</li>
+<li><strong>第一获取路径：</strong>Neocloud官方价格页、公开采购合同；用户提供成交条款。</li>
+<li><strong>降级路径：</strong>聚合报价平台/经销商报价仅作代理。</li>
+<li><strong>投资传导：</strong>同代租金和期限价差进入收入/续约压力，传导到客户Cost/Mtok。</li>
+<li><strong>常见误读：</strong>裸GPU与含网络/存储的托管服务不可比较；网页空位不是成交量。</li>
+<li><strong>选取依据：</strong>S1 p.7；S2 p.5/8–10。类型：DISTILL。</li>
+</ul>
+<h3>M09｜GPU订单→到货→部署→验收→计费数量｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>购买能力不等于交付能力，更不等于收入。</li>
+<li><strong>口径：</strong>按SKU/cohort逐月GPU数、到货/投产/验收日期；GPU数、服务器数、机柜数分开。</li>
+<li><strong>频率与时滞：</strong>季度/交付事件；领先收入。</li>
+<li><strong>第一获取路径：</strong>公司运营披露、客户验收/项目公告。</li>
+<li><strong>降级路径：</strong>供应商/渠道线索；未披露不补造。</li>
+<li><strong>投资传导：</strong>构建季度容量与收入爬坡，核对Capex转固。</li>
+<li><strong>常见误读：</strong>潜在GPU订单ARR不是已计费ARR；不能用年末数量代表全年平均。</li>
+<li><strong>选取依据：</strong>S1 p.3/7；S4 p.18–22；cohort拆分为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M10｜未来12–24月资金缺口与融资可得性｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>增长若不能融资，合同和容量不能兑现。</li>
+<li><strong>口径：</strong>逐季非受限现金、可提款承诺、到账预付款、采购/建设/租赁付款、债务本息；USD。</li>
+<li><strong>频率与时滞：</strong>季度；融资/延迟事件立即更新；对交付/稀释领先。</li>
+<li><strong>第一获取路径：</strong>SEC债务附注、信贷合同及可转债条款、公司资金指引。</li>
+<li><strong>降级路径：</strong>机构现金预算作假设参考。</li>
+<li><strong>投资传导：</strong>资金缺口改变交付/股本/信用，不只改折现率。</li>
+<li><strong>常见误读：</strong>授信总额不等于可提款额度；受限现金不用于自由周转；低票息不等于低资本成本。</li>
+<li><strong>选取依据：</strong>S1 p.10–11；季度资金表为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M11｜客户集中度、信用与现金回收｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>增长可能集中在同一个付款人或融资循环。</li>
+<li><strong>口径：</strong>分别算当期收入、未来RPO、已公告backlog的Top1/Top3；账期、应收账龄和现金回款另列。</li>
+<li><strong>频率与时滞：</strong>季度；大客户融资/合同事件；风险监测；财务滞后。</li>
+<li><strong>第一获取路径：</strong>客户集中度/应收附注、合同、公开客户融资披露。</li>
+<li><strong>降级路径：</strong>机构估计；匿名客户对应关系仅作估计。</li>
+<li><strong>投资传导：</strong>影响坏账、续约、集中度折价与可融资性。</li>
+<li><strong>常见误读：</strong>用预计ARR占比冒充当期收入占比；不能因供应商持股就假定客户信用获保。</li>
+<li><strong>选取依据：</strong>S1 p.7–10，Exhibits 11–14；回款分析为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M12｜新旧GPU代际的实际TCO与交付时间｜P0</h3>
+<ul>
+<li><strong>为什么看：</strong>新硬件可能扩张需求，也可能侵蚀旧资产租金和残值。</li>
+<li><strong>口径：</strong>同任务/精度/时延SLA的tokens/s、功耗、全栈购置价、交货日、迁移成本；training与inference分开。</li>
+<li><strong>频率与时滞：</strong>产品事件；季度；领先采购和旧卡重定价。</li>
+<li><strong>第一获取路径：</strong>厂商规格、实际用户/云商benchmark及报价。</li>
+<li><strong>降级路径：</strong>第三方可复现实测；未验证厂商宣传单列。</li>
+<li><strong>投资传导：</strong>影响单位资本产出、代际折旧/残值和客户选择。</li>
+<li><strong>常见误读：</strong>标称FLOPS不是收入能力；只用GPU芯片价漏掉集群成本。</li>
+<li><strong>选取依据：</strong>S4 p.17–22；S2 p.5/8–10。类型：DISTILL。</li>
+</ul>
+<h3>M13｜合同计费利用率与实际计算利用率｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>固定合同和按需业务的收入驱动不同。</li>
+<li><strong>口径：</strong>分别定义已售容量/可售容量、计费小时/可售小时、GPU忙时/部署小时；明确停机。</li>
+<li><strong>频率与时滞：</strong>季度；月度可用运营数据；同步收入与成本。</li>
+<li><strong>第一获取路径：</strong>公司运营披露、合同计费规则。</li>
+<li><strong>降级路径：</strong>模型反推用区间，不伪装直接观测。</li>
+<li><strong>投资传导：</strong>收入模型选计费量，Token成本选计算利用率。</li>
+<li><strong>常见误读：</strong>take-or-pay不因客户暂时空闲就同比例少收入；吞吐已含利用率不能再乘U。</li>
+<li><strong>选取依据：</strong>S1 p.7；S2 p.5；概念分离为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M14｜输入/输出比例与KV缓存命中｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>相同Token数对应不同收入和计算负载。</li>
+<li><strong>口径：</strong>IO=input/output；KV=输入缓存命中占比；缓存读/写分开，按模型和任务。</li>
+<li><strong>频率与时滞：</strong>每周样本；模型/任务变化时；同步单位经济。</li>
+<li><strong>第一获取路径：</strong>模型/应用可观测日志（用户授权）、OpenRouter公开样本。</li>
+<li><strong>降级路径：</strong>S2历史假设仅作为敏感性范围。</li>
+<li><strong>投资传导：</strong>进入F5混合收入；成本节约不能机械等于价格折扣。</li>
+<li><strong>常见误读：</strong>缓存Token仍收费但价格不同；命中率不跨样本强比。</li>
+<li><strong>选取依据：</strong>S2 p.4–7，Exhibits 3–8。类型：DISTILL。</li>
+</ul>
+<h3>M15｜有效吞吐与推理优化｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>软件效率改变单位GPU小时产出。</li>
+<li><strong>口径：</strong>同模型、精度、批大小、上下文、延迟SLA的有效T；是否已含U；prefill/decode分离。</li>
+<li><strong>频率与时滞：</strong>模型发布/优化事件；月度；对单位成本领先。</li>
+<li><strong>第一获取路径：</strong>可复现benchmark、云/模型厂披露与客户实测。</li>
+<li><strong>降级路径：</strong>OpenRouter用户速度不是集群/GPU吞吐，不能直接替代。</li>
+<li><strong>投资传导：</strong>改变Cost/Mtok与所需GPU小时；潜在降低租赁需求强度。</li>
+<li><strong>常见误读：</strong>单请求生成速度不等于批处理集群吞吐；不同硬件直接比较失真。</li>
+<li><strong>选取依据：</strong>S2 p.5/8–12。类型：DISTILL。</li>
+</ul>
+<h3>M16｜AI模型/API直接毛利与增量毛利｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>检验最终客户是否能经济地使用更多算力。</li>
+<li><strong>口径：</strong>按模态/业务分部；直接推理毛利与含训练/研发的公司利润分开；增量毛利=Δ毛利额/Δ收入。</li>
+<li><strong>频率与时滞：</strong>季度/半年财报；滞后验证。</li>
+<li><strong>第一获取路径：</strong>上市模型公司财报及业绩会。</li>
+<li><strong>降级路径：</strong>S2机构推算标为估计，不能当公司披露。</li>
+<li><strong>投资传导：</strong>验证租金提价承受力与客户资金需求。</li>
+<li><strong>常见误读：</strong>整体Open Platform高毛利不能直接套给编码；分母Δ收入接近0时比率无意义。</li>
+<li><strong>选取依据：</strong>S2 p.4/10–13。类型：DISTILL。</li>
+</ul>
+<h3>M17｜客户预付款与合同负债｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>既改善融资又形成未来服务义务。</li>
+<li><strong>口径：</strong>现金到账额、可退/不可退、使用限制、合同负债转销时间、是否付息。</li>
+<li><strong>频率与时滞：</strong>季度/合同事件；领先建设现金；收入确认滞后。</li>
+<li><strong>第一获取路径：</strong>现金流量表、合同负债附注、合同条款。</li>
+<li><strong>降级路径：</strong>管理层解释，缺条款则未知。</li>
+<li><strong>投资传导：</strong>降低外部融资需求但增加交付约束。</li>
+<li><strong>常见误读：</strong>预付款不是利润；不能资金来源和经营现金流重复计入同一现金预算。</li>
+<li><strong>选取依据：</strong>S1 p.10；重复计数检查为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M18｜利率、WACC、抵押和追索结构｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>同样合同可产生不同股东回报。</li>
+<li><strong>口径：</strong>基准利率+spread、发行费用、融资租赁、担保、抵押、契约、可转债行权价；WACC独立估计。</li>
+<li><strong>频率与时滞：</strong>季度/融资事件；同步资金成本，领先再融资风险。</li>
+<li><strong>第一获取路径：</strong>信贷协议、债券/可转债文件、债务附注。</li>
+<li><strong>降级路径：</strong>机构WACC只作历史参考。</li>
+<li><strong>投资传导：</strong>进入利息/现金预算/折现率和稀释情景。</li>
+<li><strong>常见误读：</strong>平均利息费用率不等于边际借款利率；SPV不必然无追索。</li>
+<li><strong>选取依据：</strong>S1 p.10–11，Exhibits 18–21。类型：DISTILL。</li>
+</ul>
+<h3>M19｜GPU折旧年限、减值及二手/续租价值｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>会计利润可能掩盖经济折旧。</li>
+<li><strong>口径：</strong>按代际资产原值、折旧方法、年限、变更、减值、租期、续租/处置价；会计与经济寿命分开。</li>
+<li><strong>频率与时滞：</strong>季度附注；新代际事件；会计滞后，二手价/续租可能领先。</li>
+<li><strong>第一获取路径：</strong>固定资产附注、减值披露、可验证同代成交/续租。</li>
+<li><strong>降级路径：</strong>二手挂牌仅作线索，非可实现残值。</li>
+<li><strong>投资传导：</strong>调整EBIT可比性、资产更新Capex与终值。</li>
+<li><strong>常见误读：</strong>延长折旧提高EBIT不增加现金；原报告没有给通用经济寿命。</li>
+<li><strong>选取依据：</strong>S1 p.4/10；S4 p.17–18；经济折旧桥为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M20｜软件附加值、客户留存与SLA表现｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>验证软件栈是否产生可收费护城河。</li>
+<li><strong>口径：</strong>按功能采用率、付费溢价、续约/流失、故障/赔偿、部署时长；明确公司有无披露。</li>
+<li><strong>频率与时滞：</strong>季度/故障事件；领先/同步续约。</li>
+<li><strong>第一获取路径：</strong>产品文档、客户案例、服务条款、实际留存披露。</li>
+<li><strong>降级路径：</strong>第三方能力评级仅作功能线索。</li>
+<li><strong>投资传导：</strong>解释价格溢价和客户转换成本，并计入服务费用。</li>
+<li><strong>常见误读：</strong>功能清单/评级不等于净留存率；不能填造NRR。</li>
+<li><strong>选取依据：</strong>S1 p.2/6–7 Exhibit 9；S4 p.22。类型：DISTILL。</li>
+</ul>
+<h3>M21｜大云厂自建供给、同档服务价格与ASIC替代｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>客户可能转成竞争者，或替换通用GPU。</li>
+<li><strong>口径：</strong>同SLA云报价、可用容量、ASIC支持模型和实际采用；自用/外售区分。</li>
+<li><strong>频率与时滞：</strong>季度/产品事件；领先续约与结构性回报。</li>
+<li><strong>第一获取路径：</strong>大云财报、产品文档、公开合作与客户部署。</li>
+<li><strong>降级路径：</strong>机构预测保留假设。</li>
+<li><strong>投资传导：</strong>验证F8稀缺价值到期及旧GPU需求。</li>
+<li><strong>常见误读：</strong>ASIC性能宣传不是客户迁移；自建增加也可能短期增加外租。</li>
+<li><strong>选取依据：</strong>S1 p.2；S4 p.17/20；S3 p.4–5。类型：DISTILL。</li>
+</ul>
+<h3>M22｜每成功任务成本、质量与模型路由｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>商品化发生在具体任务而非抽象排行榜。</li>
+<li><strong>口径：</strong>在固定任务集/SLA上成功率、重试、人审成本、Token成本和等待时间；任务路由份额。</li>
+<li><strong>频率与时滞：</strong>模型发布；月度；对定价/需求结构领先。</li>
+<li><strong>第一获取路径：</strong>用户可复现评测、公开方法明确的任务benchmark。</li>
+<li><strong>降级路径：</strong>通用榜单仅作线索。</li>
+<li><strong>投资传导：</strong>决定前沿模型溢价与低成本模型替代。</li>
+<li><strong>常见误读：</strong>一个总分不代表企业可用；更多Token可能只是更长推理/更多重试。</li>
+<li><strong>选取依据：</strong>S3 p.4–6；任务成本测量为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M23｜应用商业化广度与客户预算｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>单一实验室融资不能代替广泛ROI。</li>
+<li><strong>口径：</strong>企业付费采用率、席位/用量、预算续期、客户行业分布和可验证ROI。</li>
+<li><strong>频率与时滞：</strong>季度；重要调查发布；需求确认常滞后于试用。</li>
+<li><strong>第一获取路径：</strong>公司披露、样本方法清楚的企业调查；Census类官方调查。</li>
+<li><strong>降级路径：</strong>第三方调查保留样本/地区/问法。</li>
+<li><strong>投资传导：</strong>评估需求持续性及客户分散能力。</li>
+<li><strong>常见误读：</strong>试用率不是付费率；提效案例不是行业利润。</li>
+<li><strong>选取依据：</strong>S3 p.4–6；S4 p.18–19。类型：DISTILL。</li>
+</ul>
+<h3>M24｜训练投入与研发负担｜P1</h3>
+<ul>
+<li><strong>为什么看：</strong>推理毛利好不等于模型客户能够自我融资。</li>
+<li><strong>口径：</strong>训练/研发支出、现金消耗、模型迭代预算；资本化与费用化拆开。</li>
+<li><strong>频率与时滞：</strong>季度/融资事件；滞后验证客户财务能力。</li>
+<li><strong>第一获取路径：</strong>模型公司财报、官方融资/经营披露。</li>
+<li><strong>降级路径：</strong>媒体融资计划和机构预测单列。</li>
+<li><strong>投资传导：</strong>形成客户信用和未来算力训练/推理结构情景。</li>
+<li><strong>常见误读：</strong>不能把直接推理毛利率当净利率；训练需求不会跟付费收入简单等比例。</li>
+<li><strong>选取依据：</strong>S2 p.4；S3 p.7–8。类型：DISTILL。</li>
+</ul>
+<h3>M25｜电费、PUE、机房租约与建设成本｜P2</h3>
+<ul>
+<li><strong>为什么看：</strong>同样GPU租价下项目回报不同。</li>
+<li><strong>口径：</strong>IT/设施功率、有效PUE、电价/需量费/锁价、租赁年限/提价、建设$/IT MW。</li>
+<li><strong>频率与时滞：</strong>季度；电价/租约事件；同步运营成本，建设成本领先。</li>
+<li><strong>第一获取路径：</strong>电力/机房合同及公司项目披露。</li>
+<li><strong>降级路径：</strong>地域电价只能代理；PUE须同负载条件。</li>
+<li><strong>投资传导：</strong>进入项目现金成本与自建/租赁比较。</li>
+<li><strong>常见误读：</strong>额定GPU功耗不等于整站电耗；租金和电费可能已含在托管费。</li>
+<li><strong>选取依据：</strong>S1 p.5；S4 p.18；PUE/电费细分为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M26｜AI云与遗留业务分部、财年口径｜P2</h3>
+<ul>
+<li><strong>为什么看：</strong>避免把转型公司的矿业/投资收益当云增长。</li>
+<li><strong>口径：</strong>AI云收入/成本/资产/Capex与矿业/非核心分开；财年转日历年要有桥接。</li>
+<li><strong>频率与时滞：</strong>每次财报；滞后但公司比较的必要基础。</li>
+<li><strong>第一获取路径：</strong>分部报表与会计政策。</li>
+<li><strong>降级路径：</strong>机构调历表可参考，注明调整。</li>
+<li><strong>投资传导：</strong>重建可比基础，再谈增速、利润率和估值。</li>
+<li><strong>常见误读：</strong>IREN历史总收入不可直接对比CRWV云收入；非经常投资收益不代表云利润。</li>
+<li><strong>选取依据：</strong>S1 p.4/6，Exhibits 1/7。类型：DISTILL。</li>
+</ul>
+<h3>M27｜净债务、租赁、可转债、股本与非核心资产｜P2</h3>
+<ul>
+<li><strong>为什么看：</strong>企业价值到每股价值的桥。</li>
+<li><strong>口径：</strong>同一估值日市值、摊薄股本、债务/租赁分类、非受限现金、非核心资产可实现价值。</li>
+<li><strong>频率与时滞：</strong>财报+融资事件；估值时刷新；估值输入。</li>
+<li><strong>第一获取路径：</strong>公司财报、证券发行条款、股本披露与授权行情源。</li>
+<li><strong>降级路径：</strong>第三方EV先拆定义。</li>
+<li><strong>投资传导：</strong>EV到股权价值并揭示稀释。</li>
+<li><strong>常见误读：</strong>可转债不能既按债全扣又按全转股而不调现金；不能重复加非核心资产。</li>
+<li><strong>选取依据：</strong>S1 p.3–4/10；EV桥细则为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M28｜战略股东、关联采购与循环融资暴露｜P2</h3>
+<ul>
+<li><strong>为什么看：</strong>区分技术背书与真实独立支付能力。</li>
+<li><strong>口径：</strong>持股、投资、采购、backstop、担保分别建关系图；标关系而非认定问题。</li>
+<li><strong>频率与时滞：</strong>持股/融资/合同事件；信用与激励风险信号。</li>
+<li><strong>第一获取路径：</strong>SEC持股/关联交易文件、公司商业协议。</li>
+<li><strong>降级路径：</strong>机构关系图作线索。</li>
+<li><strong>投资传导：</strong>调低未经证实的保底假设，检查终端现金来源。</li>
+<li><strong>常见误读：</strong>供应商持股不是客户付款担保；不能仅凭互相投资断言虚假收入。</li>
+<li><strong>选取依据：</strong>S1 p.8/10–12；关系审查为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M29｜出口、数据驻留与地区可服务市场｜P2</h3>
+<ul>
+<li><strong>为什么看：</strong>全球需求不等于每家公司可服务需求。</li>
+<li><strong>口径：</strong>按司法辖区核对芯片许可、客户资格、数据部署、能源审批及生效日。</li>
+<li><strong>频率与时滞：</strong>政策事件立即更新；可能即时限制交付/需求。</li>
+<li><strong>第一获取路径：</strong>政府原始规则、监管文件、公司风险披露。</li>
+<li><strong>降级路径：</strong>媒体只作检索线索。</li>
+<li><strong>投资传导：</strong>调整可服务市场、客户归属与融资/交付条件。</li>
+<li><strong>常见误读：</strong>不用旧禁令概括当前规则；中国与美国算力云不能直接套参数。</li>
+<li><strong>选取依据：</strong>S3 p.5–6；S2 p.6；政策操作化为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h3>M30｜一致预期、价格隐含增长与事件日历｜P2</h3>
+<ul>
+<li><strong>为什么看：</strong>好产业不必然是便宜股票。</li>
+<li><strong>口径：</strong>同预测期一致预期样本/时间戳/修正；现价与EV口径；财报和交付里程碑。</li>
+<li><strong>频率与时滞：</strong>每次估值/重大事件；资本市场预期，不是经营事实。</li>
+<li><strong>第一获取路径：</strong>授权一致预期服务、公司IR日历与行情。</li>
+<li><strong>降级路径：</strong>无共识时用具名机构观点或现价条件反推。</li>
+<li><strong>投资传导：</strong>明确研究差异发生在哪一年、哪一变量、哪一估值假设。</li>
+<li><strong>常见误读：</strong>单篇研报不叫一致预期；价格下跌不等于论点证伪。</li>
+<li><strong>选取依据：</strong>S1 p.2；交易与更新规范为新增。类型：DISTILL+NEW。</li>
+</ul>
+<h2>Anthropic指标怎样真正进入研究</h2>
+<p>[用户指定+新增] 保存原披露称呼与日期；同一家公司ARR与年化收入run-rate各建序列。没有官方最新值时不补造，不把媒体转述当审计收入。若官方只给“超过某数”，保存下界和原措辞，不当精确点值。</p>
+<p>研究桥接顺序：①增长是否来自付费客户/使用量，还是涨价、短期爆款或口径变化；②API/订阅及缓存/模态结构；③吞吐效率变化后的GPU小时；④自建、云合作及具体供应商归属；⑤该供应商合同、交付、计费和回款。研究者不能从Anthropic收入增速直接推导任意算力云公司的收入增速。</p>
+<p>例如仅在其他条件相同的简化敏感性下，终端收入增至2倍、每Token有效收入降至0.8倍，则Token量约为2.5倍；若每GPU小时有效产出升至2倍，则GPU小时约1.25倍，而不是2倍。真实业务还要拆订阅、训练、缓存和供应商分流。这是代数情景，不是Anthropic实际预测。</p>
+<h2>数据获取入口与可得性</h2>
+<p>以下是应使用的来源类别及检索路径，本次未执行实时抓取，也未验证每个网站当前接口。不要把网页路径当稳定API。</p>
+<table>
+<thead>
+<tr>
+<th>数据域</th>
+<th>实际检索动作</th>
+<th>可得性边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>私营模型收入</td>
+<td>公司News/经营公告/融资公告；检索 revenue、annualized、ARR，并回到原话</td>
+<td>通常不定期；精确收入结构可能不披露</td>
+</tr>
+<tr>
+<td>上市算力云</td>
+<td>CoreWeave/IREN/Nebius IR → 最新业绩包；SEC EDGAR → 对应公司10-K/10-Q或20-F/6-K及合同附件</td>
+<td>按发行人身份取表单；不保证各项KPI都披露</td>
+</tr>
+<tr>
+<td>大云投入</td>
+<td>Microsoft/Amazon/Alphabet/Meta IR → 财报、现金流和业绩会；区分财年与自然年</td>
+<td>AI拆分往往仅有管理层定性说明</td>
+</tr>
+<tr>
+<td>API价格</td>
+<td>模型官方文档Pricing与版本记录；保留地区/缓存/批处理条件</td>
+<td>公开标价可得，客户净折扣通常不可得</td>
+</tr>
+<tr>
+<td>GPU租赁价</td>
+<td>各云官方价目表/配置页 + 同篮子历史快照</td>
+<td>公开按需价可得；多年净成交价可能只在合同披露</td>
+</tr>
+<tr>
+<td>Token与模型性能</td>
+<td>OpenRouter公开统计 + 有方法说明的benchmark/客户实测</td>
+<td>样本偏差、批处理和GPU规格限制必须标注</td>
+</tr>
+<tr>
+<td>电力/施工</td>
+<td>公司site披露与电力/地方项目文件交叉核对</td>
+<td>通电不自动等于AI客户验收</td>
+</tr>
+<tr>
+<td>融资与股本</td>
+<td>财报债务脚注、信贷协议、可转债和证券发行文件</td>
+<td>公告额度与实际可提款额不同</td>
+</tr>
+</tbody>
+</table>
+<h2>每个数据点的记录规范</h2>
+<p>至少存<code>metric_id/entity/value/unit/currency/period_end/observed_at/published_at/retrieved_at/source_locator/definition/status/basis/comparison/expectation/affected_parameter</code>。<code>status</code>为disclosed/estimated/proxy/missing/conflicted；<code>basis</code>区分事实、指引和预测。缺失不填0。</p>
+<p>同时保存前值和当时版本。只在定义与样本一致时计算环比/同比；不等间隔收入run-rate公告不能直接当季度增速。没有一致预期就填未取得，不能以“上次值”代替市场预期。</p>
+<h2>监测触发器</h2>
+<p>[新增] 把“变化”与“惊喜”分开：新披露值减旧同口径值是变化；新披露值相对事前预期才是预期差。没有事前预期就只谈变化。</p>
+<p>触发升级研究的事件包括：交付日期后移、合同固定/可选范围改变、融资提款受阻、同配置续租降价、客户收入增长但现金回收恶化、吞吐提升使GPU小时需求方向变化。数值阈值应按公司合同/历史波动/模型敏感性设定；没有依据时不设统一的“±10%”红绿灯。</p></html>

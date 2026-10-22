@@ -1,0 +1,1915 @@
+{
+  "design": "Exploratory historical disclosure drift; NOT immediate event reaction or causal effect. Date-only disclosure -> next session close entry. Adjusted Yahoo close. Historical public webpages not contemporaneous archives. No expectations surprise data.",
+  "price_coverage": {
+    "CRWV": [
+      "2025-03-28",
+      "2026-10-20",
+      393
+    ],
+    "IREN": [
+      "2021-11-17",
+      "2026-10-20",
+      1235
+    ],
+    "NBIS": [
+      "2024-10-21",
+      "2026-10-20",
+      501
+    ],
+    "QQQ": [
+      "2021-10-21",
+      "2026-10-20",
+      1254
+    ],
+    "SMH": [
+      "2021-10-21",
+      "2026-10-20",
+      1254
+    ],
+    "SPY": [
+      "2021-10-21",
+      "2026-10-20",
+      1254
+    ]
+  },
+  "summary": {
+    "H1_QQQ_1": {
+      "n": 4,
+      "mean": 0.01004218989419909,
+      "median": -0.005836472902782441,
+      "positive": 2,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        -0.019319961040567966,
+        0.028818565630978458
+      ]
+    },
+    "H2_QQQ_1": {
+      "n": 2,
+      "mean": -0.008061421725937379,
+      "median": -0.008061421725937379,
+      "positive": 1,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        -0.04030882838554917,
+        0.02418598493367441
+      ]
+    },
+    "H3_QQQ_1": {
+      "n": 6,
+      "mean": 0.00816868100550631,
+      "median": 0.0028234140860283197,
+      "positive": 3,
+      "inference": "exploratory, small sample",
+      "leave_one_out_mean": [
+        -0.008224859397061524,
+        0.017864182883717404
+      ],
+      "mean_bootstrap95": [
+        -0.022711232001670117,
+        0.04398376696305325
+      ],
+      "spearman": 0.028571428571428574,
+      "p_raw": 1.0,
+      "p_method": "exact two-sided permutation",
+      "leave_one_out_rho": [
+        -0.7,
+        0.3
+      ],
+      "split_rho": [
+        0.5,
+        -0.5
+      ]
+    },
+    "H1_QQQ_5": {
+      "n": 4,
+      "mean": 0.13407551747267965,
+      "median": 0.1400447858945613,
+      "positive": 2,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        0.08145556063536406,
+        0.19067498659124968
+      ]
+    },
+    "H2_QQQ_5": {
+      "n": 2,
+      "mean": 0.039054819893214576,
+      "median": 0.039054819893214576,
+      "positive": 2,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        0.03643503983454388,
+        0.04167459995188527
+      ]
+    },
+    "H3_QQQ_5": {
+      "n": 6,
+      "mean": -0.00613639613814021,
+      "median": 0.014597014505972894,
+      "positive": 4,
+      "inference": "exploratory, small sample",
+      "leave_one_out_mean": [
+        -0.015698595356145307,
+        0.014252684513348513
+      ],
+      "mean_bootstrap95": [
+        -0.05279870772725578,
+        0.03090221809746735
+      ],
+      "spearman": -0.3714285714285715,
+      "p_raw": 0.49722222222222223,
+      "p_method": "exact two-sided permutation",
+      "leave_one_out_rho": [
+        -0.7,
+        0.09999999999999999
+      ],
+      "split_rho": [
+        -1.0,
+        0.5
+      ],
+      "p_holm_family3": 1
+    },
+    "H1_QQQ_20": {
+      "n": 4,
+      "mean": 0.24191064845863874,
+      "median": 0.22454785115863027,
+      "positive": 3,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        0.12516551186587274,
+        0.3470805868513991
+      ]
+    },
+    "H2_QQQ_20": {
+      "n": 2,
+      "mean": -0.0421184402287782,
+      "median": -0.0421184402287782,
+      "positive": 0,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        -0.07614362180689616,
+        -0.00809325865066024
+      ]
+    },
+    "H3_QQQ_20": {
+      "n": 6,
+      "mean": 0.06688390716048541,
+      "median": 0.020221468669550158,
+      "positive": 3,
+      "inference": "exploratory, small sample",
+      "leave_one_out_mean": [
+        0.014776038701132421,
+        0.09947438088400465
+      ],
+      "mean_bootstrap95": [
+        -0.045439246837147305,
+        0.1933852769975307
+      ],
+      "spearman": 0.48571428571428577,
+      "p_raw": 0.35555555555555557,
+      "p_method": "exact two-sided permutation",
+      "leave_one_out_rho": [
+        0.19999999999999998,
+        0.6
+      ],
+      "split_rho": [
+        0.5,
+        0.5
+      ]
+    },
+    "H1_SMH_1": {
+      "n": 4,
+      "mean": 1.7891306863172807e-05,
+      "median": -0.02001018480504585,
+      "positive": 1,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        -0.0297436344561359,
+        0.016427366328589568
+      ]
+    },
+    "H2_SMH_1": {
+      "n": 2,
+      "mean": -0.004465461549043426,
+      "median": -0.004465461549043426,
+      "positive": 1,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        -0.03060093494694427,
+        0.021670011848857418
+      ]
+    },
+    "H3_SMH_1": {
+      "n": 6,
+      "mean": 0.014014415975478608,
+      "median": 0.008592752228987866,
+      "positive": 3,
+      "inference": "exploratory, small sample",
+      "leave_one_out_mean": [
+        -0.0013781106996941573,
+        0.02293748615996318
+      ],
+      "mean_bootstrap95": [
+        -0.016023632036275364,
+        0.04942812824924494
+      ],
+      "spearman": -0.08571428571428573,
+      "p_raw": 0.9194444444444444,
+      "p_method": "exact two-sided permutation",
+      "leave_one_out_rho": [
+        -0.8999999999999998,
+        0.09999999999999999
+      ],
+      "split_rho": [
+        0.5,
+        -0.5
+      ]
+    },
+    "H1_SMH_5": {
+      "n": 4,
+      "mean": 0.1081625540231449,
+      "median": 0.10443638889800648,
+      "positive": 2,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        0.05897834281631819,
+        0.15486265514654599
+      ]
+    },
+    "H2_SMH_5": {
+      "n": 2,
+      "mean": 0.043424677052198435,
+      "median": 0.043424677052198435,
+      "positive": 2,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        0.03406866670116204,
+        0.05278068740323483
+      ]
+    },
+    "H3_SMH_5": {
+      "n": 6,
+      "mean": -0.0020259240552971867,
+      "median": 0.013220898365826683,
+      "positive": 4,
+      "inference": "exploratory, small sample",
+      "leave_one_out_mean": [
+        -0.01298724634700359,
+        0.015974393036023972
+      ],
+      "mean_bootstrap95": [
+        -0.04359348523394433,
+        0.033109332504694854
+      ],
+      "spearman": -0.3714285714285715,
+      "p_raw": 0.49722222222222223,
+      "p_method": "exact two-sided permutation",
+      "leave_one_out_rho": [
+        -0.7,
+        0.09999999999999999
+      ],
+      "split_rho": [
+        -1.0,
+        0.5
+      ]
+    },
+    "H1_SMH_20": {
+      "n": 4,
+      "mean": 0.16774333716824977,
+      "median": 0.16568541154882233,
+      "positive": 3,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        0.06146466974684261,
+        0.2726500541767053
+      ]
+    },
+    "H2_SMH_20": {
+      "n": 2,
+      "mean": -0.061430969896522414,
+      "median": -0.061430969896522414,
+      "positive": 0,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        -0.0788109297992573,
+        -0.04405100999378753
+      ]
+    },
+    "H3_SMH_20": {
+      "n": 6,
+      "mean": 0.04744119222150878,
+      "median": -0.032662988772914237,
+      "positive": 2,
+      "inference": "exploratory, small sample",
+      "leave_one_out_mean": [
+        -0.01481288346389944,
+        0.07384932317943689
+      ],
+      "mean_bootstrap95": [
+        -0.06252654210128909,
+        0.18748870573653287
+      ],
+      "spearman": 0.48571428571428577,
+      "p_raw": 0.35555555555555557,
+      "p_method": "exact two-sided permutation",
+      "leave_one_out_rho": [
+        0.19999999999999998,
+        0.6
+      ],
+      "split_rho": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "events": [
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2025-09-02",
+      "value": 5000000000.0,
+      "excess": -0.04628693731613901,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-04",
+          "stock_return": -0.026702202601515013,
+          "benchmark_return": 0.009051342381911631,
+          "excess": -0.035753544983426644
+        },
+        "NBIS": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-04",
+          "stock_return": -0.011271863618736222,
+          "benchmark_return": 0.009051342381911631,
+          "excess": -0.020323206000647853
+        },
+        "IREN": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-04",
+          "stock_return": -0.07373271858243091,
+          "benchmark_return": 0.009051342381911631,
+          "excess": -0.08278406096434254
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2026-02-12",
+      "value": 14000000000.0,
+      "excess": -0.027998092045424656,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-17",
+          "stock_return": -0.05247814314329624,
+          "benchmark_return": -0.001030077782878669,
+          "excess": -0.05144806536041757
+        },
+        "NBIS": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-17",
+          "stock_return": -0.004999545785979831,
+          "benchmark_return": -0.001030077782878669,
+          "excess": -0.003969468003101162
+        },
+        "IREN": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-17",
+          "stock_return": -0.029606820555633906,
+          "benchmark_return": -0.001030077782878669,
+          "excess": -0.028576742772755237
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2026-04-06",
+      "value": 30000000000.0,
+      "excess": 0.016325146239859773,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-08",
+          "stock_return": 0.042937632025270345,
+          "benchmark_return": 0.029732056399946583,
+          "excess": 0.013205575625323762
+        },
+        "NBIS": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-08",
+          "stock_return": 0.06473593164686453,
+          "benchmark_return": 0.029732056399946583,
+          "excess": 0.03500387524691795
+        },
+        "IREN": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-08",
+          "stock_return": 0.030498044247284195,
+          "benchmark_return": 0.029732056399946583,
+          "excess": 0.0007659878473376125
+        }
+      },
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2026-05-28",
+      "value": 47000000000.0,
+      "excess": 0.09812864269850026,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-01",
+          "stock_return": 0.1395964675060093,
+          "benchmark_return": 0.006000274716762455,
+          "excess": 0.13359619278924684
+        },
+        "NBIS": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-01",
+          "stock_return": 0.1446190400162064,
+          "benchmark_return": 0.006000274716762455,
+          "excess": 0.13861876529944395
+        },
+        "IREN": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-01",
+          "stock_return": 0.028171244723572464,
+          "benchmark_return": 0.006000274716762455,
+          "excess": 0.02217097000681001
+        }
+      },
+      "source": "https://www.anthropic.com/news/series-h"
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2025-08-07",
+      "period": null,
+      "growth": 1.06,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-11",
+      "stock_return": 0.021227087967208957,
+      "benchmark_return": -0.002958896966465452,
+      "excess": 0.02418598493367441
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2025-11-11",
+      "period": null,
+      "growth": 0.39,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-13",
+      "stock_return": -0.06072491860820306,
+      "benchmark_return": -0.020416090222653893,
+      "excess": -0.04030882838554917
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2025-05-20",
+      "period": "2025-03-31",
+      "growth": 1.7666666666666666,
+      "source": "https://assets.nebius.com/assets/2ebc1a9b-61e9-4398-bbdb-e8a24a50efe6/Nebius%20Group_Letter%20to%20shareholders_Q12025.pdf?cache-buster=2025-06-11T17:44:46.519Z",
+      "entry": "2025-05-21",
+      "exit": "2025-05-22",
+      "stock_return": -0.02877695232725952,
+      "benchmark_return": 0.00187132937822998,
+      "excess": -0.0306482817054895
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2025-08-07",
+      "period": "2025-06-30",
+      "growth": 0.7269076305220883,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-11",
+      "stock_return": 0.021227087967208957,
+      "benchmark_return": -0.002958896966465452,
+      "excess": 0.02418598493367441
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2025-11-11",
+      "period": "2025-09-30",
+      "growth": 0.2813953488372094,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-13",
+      "stock_return": -0.06072491860820306,
+      "benchmark_return": -0.020416090222653893,
+      "excess": -0.04030882838554917
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2026-02-12",
+      "period": "2025-12-31",
+      "growth": 1.2686025408348458,
+      "source": "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf?cache-buster=2026-02-12T11:43:13.446Z",
+      "entry": "2026-02-13",
+      "exit": "2026-02-17",
+      "stock_return": -0.004999545785979831,
+      "benchmark_return": -0.001030077782878669,
+      "excess": -0.003969468003101162
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2026-05-13",
+      "period": "2026-03-31",
+      "growth": 0.536,
+      "source": "https://assets.nebius.com/assets/4f7f76ee-aa57-41d9-935b-cac74898469d/Nebius%20SHL_Q1%202026.pdf?cache-buster=2026-05-13T12:52:30.293Z&_gl=1*o9sc01*_gcl_aw*R0NMLjE3Nzg1ODAxNjkuQ2p3S0NBanduNHZRQmhCc0Vpd0FxM2hoTjlhM2pLZUNqYmFKNEhjRTZYN080QlpUc2pyc0dNVTVyQi1nbzROckw4aEdsNnJ4eW9XMGJSb0MzUmdRQXZEX0J3RQ..*_gcl_au*OTMxOTg0ODM4LjE3NzY3NjM1OTcuMzIwNTc3NzU3LjE3NzgxNDQ3MTQuMTc3ODE0NDcxNA..",
+      "entry": "2026-05-14",
+      "exit": "2026-05-15",
+      "stock_return": -0.005471361015024434,
+      "benchmark_return": -0.015087657190182235,
+      "excess": 0.009616296175157801
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 1,
+      "date": "2026-08-12",
+      "period": "2026-06-30",
+      "growth": 0.5625,
+      "source": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11:54:46.695Z",
+      "entry": "2026-08-13",
+      "exit": "2026-08-14",
+      "stock_return": 0.08877038890229394,
+      "benchmark_return": -0.0013659941160515388,
+      "excess": 0.09013638301834548
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2025-09-02",
+      "value": 5000000000.0,
+      "excess": 0.28734233510085083,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-10",
+          "stock_return": 0.303293312964513,
+          "benchmark_return": 0.018646861629812328,
+          "excess": 0.2846464513347007
+        },
+        "NBIS": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-10",
+          "stock_return": 0.42254375048010573,
+          "benchmark_return": 0.018646861629812328,
+          "excess": 0.4038968888502934
+        },
+        "IREN": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-10",
+          "stock_return": 0.19213052674737074,
+          "benchmark_return": 0.018646861629812328,
+          "excess": 0.17348366511755842
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2026-02-12",
+      "value": 14000000000.0,
+      "excess": -0.0072527633117282315,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-23",
+          "stock_return": -0.05414415376995274,
+          "benchmark_return": -0.0008473417400052252,
+          "excess": -0.053296812029947516
+        },
+        "NBIS": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-23",
+          "stock_return": 0.026527889168976637,
+          "benchmark_return": -0.0008473417400052252,
+          "excess": 0.027375230908981862
+        },
+        "IREN": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-23",
+          "stock_return": 0.0033159494457757344,
+          "benchmark_return": -0.0008473417400052252,
+          "excess": 0.00416329118578096
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2026-04-06",
+      "value": 30000000000.0,
+      "excess": 0.2919353879846265,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-14",
+          "stock_return": 0.3749413407488711,
+          "benchmark_return": 0.06797583583900235,
+          "excess": 0.30696550490986874
+        },
+        "NBIS": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-14",
+          "stock_return": 0.37938671496276966,
+          "benchmark_return": 0.06797583583900235,
+          "excess": 0.3114108791237673
+        },
+        "IREN": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-14",
+          "stock_return": 0.32540561575924576,
+          "benchmark_return": 0.06797583583900235,
+          "excess": 0.2574297799202434
+        }
+      },
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2026-05-28",
+      "value": 47000000000.0,
+      "excess": -0.035722889883030406,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-05",
+          "stock_return": -0.08344745267518494,
+          "benchmark_return": -0.045035240129458254,
+          "excess": -0.03841221254572669
+        },
+        "NBIS": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-05",
+          "stock_return": -0.014193599166019255,
+          "benchmark_return": -0.045035240129458254,
+          "excess": 0.030841640963439
+        },
+        "IREN": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-05",
+          "stock_return": -0.14463333819626178,
+          "benchmark_return": -0.045035240129458254,
+          "excess": -0.09959809806680353
+        }
+      },
+      "source": "https://www.anthropic.com/news/series-h"
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2025-08-07",
+      "period": null,
+      "growth": 1.06,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-15",
+      "stock_return": 0.04129113139996177,
+      "benchmark_return": 0.004856091565417886,
+      "excess": 0.03643503983454388
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2025-11-11",
+      "period": null,
+      "growth": 0.39,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-19",
+      "stock_return": 0.007524364983892973,
+      "benchmark_return": -0.0341502349679923,
+      "excess": 0.04167459995188527
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2025-05-20",
+      "period": "2025-03-31",
+      "growth": 1.7666666666666666,
+      "source": "https://assets.nebius.com/assets/2ebc1a9b-61e9-4398-bbdb-e8a24a50efe6/Nebius%20Group_Letter%20to%20shareholders_Q12025.pdf?cache-buster=2025-06-11T17:44:46.519Z",
+      "entry": "2025-05-21",
+      "exit": "2025-05-29",
+      "stock_return": -0.022610413535942286,
+      "benchmark_return": 0.013429832695690092,
+      "excess": -0.03604024623163238
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2025-08-07",
+      "period": "2025-06-30",
+      "growth": 0.7269076305220883,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-15",
+      "stock_return": 0.04129113139996177,
+      "benchmark_return": 0.004856091565417886,
+      "excess": 0.03643503983454388
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2025-11-11",
+      "period": "2025-09-30",
+      "growth": 0.2813953488372094,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-19",
+      "stock_return": 0.007524364983892973,
+      "benchmark_return": -0.0341502349679923,
+      "excess": 0.04167459995188527
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2026-02-12",
+      "period": "2025-12-31",
+      "growth": 1.2686025408348458,
+      "source": "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf?cache-buster=2026-02-12T11:43:13.446Z",
+      "entry": "2026-02-13",
+      "exit": "2026-02-23",
+      "stock_return": 0.026527889168976637,
+      "benchmark_return": -0.0008473417400052252,
+      "excess": 0.027375230908981862
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2026-05-13",
+      "period": "2026-03-31",
+      "growth": 0.536,
+      "source": "https://assets.nebius.com/assets/4f7f76ee-aa57-41d9-935b-cac74898469d/Nebius%20SHL_Q1%202026.pdf?cache-buster=2026-05-13T12:52:30.293Z&_gl=1*o9sc01*_gcl_aw*R0NMLjE3Nzg1ODAxNjkuQ2p3S0NBanduNHZRQmhCc0Vpd0FxM2hoTjlhM2pLZUNqYmFKNEhjRTZYN080QlpUc2pyc0dNVTVyQi1nbzROckw4aEdsNnJ4eW9XMGJSb0MzUmdRQXZEX0J3RQ..*_gcl_au*OTMxOTg0ODM4LjE3NzY3NjM1OTcuMzIwNTc3NzU3LjE3NzgxNDQ3MTQuMTc3ODE0NDcxNA..",
+      "entry": "2026-05-14",
+      "exit": "2026-05-21",
+      "stock_return": -0.005516623352357808,
+      "benchmark_return": -0.007335421455321733,
+      "excess": 0.0018187981029639255
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 5,
+      "date": "2026-08-12",
+      "period": "2026-06-30",
+      "growth": 0.5625,
+      "source": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11:54:46.695Z",
+      "entry": "2026-08-13",
+      "exit": "2026-08-20",
+      "stock_return": -0.13695888329401273,
+      "benchmark_return": -0.028877083898428912,
+      "excess": -0.10808179939558382
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2025-09-02",
+      "value": 5000000000.0,
+      "excess": 0.5921460582369368,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2025-09-03",
+          "exit": "2025-10-01",
+          "stock_return": 0.5248109394723648,
+          "benchmark_return": 0.05942997230976532,
+          "excess": 0.46538096716259947
+        },
+        "NBIS": {
+          "entry": "2025-09-03",
+          "exit": "2025-10-01",
+          "stock_return": 0.7610052996690133,
+          "benchmark_return": 0.05942997230976532,
+          "excess": 0.701575327359248
+        },
+        "IREN": {
+          "entry": "2025-09-03",
+          "exit": "2025-10-01",
+          "stock_return": 0.6689118524987283,
+          "benchmark_return": 0.05942997230976532,
+          "excess": 0.609481880188963
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2026-02-12",
+      "value": 14000000000.0,
+      "excess": 0.09698897967690275,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-02-13",
+          "exit": "2026-03-16",
+          "stock_return": -0.10599750320837331,
+          "benchmark_return": -0.0025584063463536255,
+          "excess": -0.10343909686201969
+        },
+        "NBIS": {
+          "entry": "2026-02-13",
+          "exit": "2026-03-16",
+          "stock_return": 0.3248648431108967,
+          "benchmark_return": -0.0025584063463536255,
+          "excess": 0.3274232494572503
+        },
+        "IREN": {
+          "entry": "2026-02-13",
+          "exit": "2026-03-16",
+          "stock_return": 0.06442438008912399,
+          "benchmark_return": -0.0025584063463536255,
+          "excess": 0.06698278643547761
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2026-04-06",
+      "value": 30000000000.0,
+      "excess": 0.3521067226403578,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-04-07",
+          "exit": "2026-05-05",
+          "stock_return": 0.5003519778829897,
+          "benchmark_return": 0.15803858858387643,
+          "excess": 0.34231338929911326
+        },
+        "NBIS": {
+          "entry": "2026-04-07",
+          "exit": "2026-05-05",
+          "stock_return": 0.4984667451658136,
+          "benchmark_return": 0.15803858858387643,
+          "excess": 0.34042815658193715
+        },
+        "IREN": {
+          "entry": "2026-04-07",
+          "exit": "2026-05-05",
+          "stock_return": 0.5316172106238994,
+          "benchmark_return": 0.15803858858387643,
+          "excess": 0.373578622040023
+        }
+      },
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2026-05-28",
+      "value": 47000000000.0,
+      "excess": -0.07359916671964233,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-29",
+          "stock_return": -0.12800143156503385,
+          "benchmark_return": -0.01819592607302334,
+          "excess": -0.10980550549201051
+        },
+        "NBIS": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-29",
+          "stock_return": 0.1300791814226403,
+          "benchmark_return": -0.01819592607302334,
+          "excess": 0.14827510749566364
+        },
+        "IREN": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-29",
+          "stock_return": -0.2774630282356034,
+          "benchmark_return": -0.01819592607302334,
+          "excess": -0.2592671021625801
+        }
+      },
+      "source": "https://www.anthropic.com/news/series-h"
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2025-08-07",
+      "period": null,
+      "growth": 1.06,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-09-08",
+      "stock_return": -0.068624619140352,
+      "benchmark_return": 0.00751900266654415,
+      "excess": -0.07614362180689616
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2025-11-11",
+      "period": null,
+      "growth": 0.39,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-12-11",
+      "stock_return": -0.0008478362710598875,
+      "benchmark_return": 0.0072454223796003525,
+      "excess": -0.00809325865066024
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2025-05-20",
+      "period": "2025-03-31",
+      "growth": 1.7666666666666666,
+      "source": "https://assets.nebius.com/assets/2ebc1a9b-61e9-4398-bbdb-e8a24a50efe6/Nebius%20Group_Letter%20to%20shareholders_Q12025.pdf?cache-buster=2025-06-11T17:44:46.519Z",
+      "entry": "2025-05-21",
+      "exit": "2025-06-20",
+      "stock_return": 0.23252835245452053,
+      "benchmark_return": 0.026879013023951792,
+      "excess": 0.20564933943056873
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2025-08-07",
+      "period": "2025-06-30",
+      "growth": 0.7269076305220883,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-09-08",
+      "stock_return": -0.068624619140352,
+      "benchmark_return": 0.00751900266654415,
+      "excess": -0.07614362180689616
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2025-11-11",
+      "period": "2025-09-30",
+      "growth": 0.2813953488372094,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-12-11",
+      "stock_return": -0.0008478362710598875,
+      "benchmark_return": 0.0072454223796003525,
+      "excess": -0.00809325865066024
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2026-02-12",
+      "period": "2025-12-31",
+      "growth": 1.2686025408348458,
+      "source": "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf?cache-buster=2026-02-12T11:43:13.446Z",
+      "entry": "2026-02-13",
+      "exit": "2026-03-16",
+      "stock_return": 0.3248648431108967,
+      "benchmark_return": -0.0025584063463536255,
+      "excess": 0.3274232494572503
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2026-05-13",
+      "period": "2026-03-31",
+      "growth": 0.536,
+      "source": "https://assets.nebius.com/assets/4f7f76ee-aa57-41d9-935b-cac74898469d/Nebius%20SHL_Q1%202026.pdf?cache-buster=2026-05-13T12:52:30.293Z&_gl=1*o9sc01*_gcl_aw*R0NMLjE3Nzg1ODAxNjkuQ2p3S0NBanduNHZRQmhCc0Vpd0FxM2hoTjlhM2pLZUNqYmFKNEhjRTZYN080QlpUc2pyc0dNVTVyQi1nbzROckw4aEdsNnJ4eW9XMGJSb0MzUmdRQXZEX0J3RQ..*_gcl_au*OTMxOTg0ODM4LjE3NzY3NjM1OTcuMzIwNTc3NzU3LjE3NzgxNDQ3MTQuMTc3ODE0NDcxNA..",
+      "entry": "2026-05-14",
+      "exit": "2026-06-12",
+      "stock_return": 0.05068960896790409,
+      "benchmark_return": 0.002153412978143532,
+      "excess": 0.048536195989760555
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "QQQ",
+      "horizon": 20,
+      "date": "2026-08-12",
+      "period": "2026-06-30",
+      "growth": 0.5625,
+      "source": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11:54:46.695Z",
+      "entry": "2026-08-13",
+      "exit": "2026-09-11",
+      "stock_return": -0.11954983938604435,
+      "benchmark_return": -0.023481377928933567,
+      "excess": -0.09606846145711079
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2025-09-02",
+      "value": 5000000000.0,
+      "excess": -0.049210533758316,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-04",
+          "stock_return": -0.026702202601515013,
+          "benchmark_return": 0.011974938824088621,
+          "excess": -0.038677141425603634
+        },
+        "NBIS": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-04",
+          "stock_return": -0.011271863618736222,
+          "benchmark_return": 0.011974938824088621,
+          "excess": -0.023246802442824843
+        },
+        "IREN": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-04",
+          "stock_return": -0.07373271858243091,
+          "benchmark_return": 0.011974938824088621,
+          "excess": -0.08570765740651953
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2026-02-12",
+      "value": 14000000000.0,
+      "excess": -0.02851313143320518,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-17",
+          "stock_return": -0.05247814314329624,
+          "benchmark_return": -0.0005150383950981441,
+          "excess": -0.0519631047481981
+        },
+        "NBIS": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-17",
+          "stock_return": -0.004999545785979831,
+          "benchmark_return": -0.0005150383950981441,
+          "excess": -0.004484507390881687
+        },
+        "IREN": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-17",
+          "stock_return": -0.029606820555633906,
+          "benchmark_return": -0.0005150383950981441,
+          "excess": -0.029091782160535762
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2026-04-06",
+      "value": 30000000000.0,
+      "excess": -0.011507238176886517,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-08",
+          "stock_return": 0.042937632025270345,
+          "benchmark_return": 0.057564440816692874,
+          "excess": -0.01462680879142253
+        },
+        "NBIS": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-08",
+          "stock_return": 0.06473593164686453,
+          "benchmark_return": 0.057564440816692874,
+          "excess": 0.007171490830171656
+        },
+        "IREN": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-08",
+          "stock_return": 0.030498044247284195,
+          "benchmark_return": 0.057564440816692874,
+          "excess": -0.02706639656940868
+        }
+      },
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2026-05-28",
+      "value": 47000000000.0,
+      "excess": 0.0893024685958604,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-01",
+          "stock_return": 0.1395964675060093,
+          "benchmark_return": 0.014826448819402316,
+          "excess": 0.12477001868660698
+        },
+        "NBIS": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-01",
+          "stock_return": 0.1446190400162064,
+          "benchmark_return": 0.014826448819402316,
+          "excess": 0.12979259119680409
+        },
+        "IREN": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-01",
+          "stock_return": 0.028171244723572464,
+          "benchmark_return": 0.014826448819402316,
+          "excess": 0.013344795904170148
+        }
+      },
+      "source": "https://www.anthropic.com/news/series-h"
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2025-08-07",
+      "period": null,
+      "growth": 1.06,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-11",
+      "stock_return": 0.021227087967208957,
+      "benchmark_return": -0.0004429238816484604,
+      "excess": 0.021670011848857418
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2025-11-11",
+      "period": null,
+      "growth": 0.39,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-13",
+      "stock_return": -0.06072491860820306,
+      "benchmark_return": -0.03012398366125879,
+      "excess": -0.03060093494694427
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2025-05-20",
+      "period": "2025-03-31",
+      "growth": 1.7666666666666666,
+      "source": "https://assets.nebius.com/assets/2ebc1a9b-61e9-4398-bbdb-e8a24a50efe6/Nebius%20Group_Letter%20to%20shareholders_Q12025.pdf?cache-buster=2025-06-11T17:44:46.519Z",
+      "entry": "2025-05-21",
+      "exit": "2025-05-22",
+      "stock_return": -0.02877695232725952,
+      "benchmark_return": -0.0027332847782280956,
+      "excess": -0.026043667549031424
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2025-08-07",
+      "period": "2025-06-30",
+      "growth": 0.7269076305220883,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-11",
+      "stock_return": 0.021227087967208957,
+      "benchmark_return": -0.0004429238816484604,
+      "excess": 0.021670011848857418
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2025-11-11",
+      "period": "2025-09-30",
+      "growth": 0.2813953488372094,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-13",
+      "stock_return": -0.06072491860820306,
+      "benchmark_return": -0.03012398366125879,
+      "excess": -0.03060093494694427
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2026-02-12",
+      "period": "2025-12-31",
+      "growth": 1.2686025408348458,
+      "source": "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf?cache-buster=2026-02-12T11:43:13.446Z",
+      "entry": "2026-02-13",
+      "exit": "2026-02-17",
+      "stock_return": -0.004999545785979831,
+      "benchmark_return": -0.0005150383950981441,
+      "excess": -0.004484507390881687
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2026-05-13",
+      "period": "2026-03-31",
+      "growth": 0.536,
+      "source": "https://assets.nebius.com/assets/4f7f76ee-aa57-41d9-935b-cac74898469d/Nebius%20SHL_Q1%202026.pdf?cache-buster=2026-05-13T12:52:30.293Z&_gl=1*o9sc01*_gcl_aw*R0NMLjE3Nzg1ODAxNjkuQ2p3S0NBanduNHZRQmhCc0Vpd0FxM2hoTjlhM2pLZUNqYmFKNEhjRTZYN080QlpUc2pyc0dNVTVyQi1nbzROckw4aEdsNnJ4eW9XMGJSb0MzUmdRQXZEX0J3RQ..*_gcl_au*OTMxOTg0ODM4LjE3NzY3NjM1OTcuMzIwNTc3NzU3LjE3NzgxNDQ3MTQuMTc3ODE0NDcxNA..",
+      "entry": "2026-05-14",
+      "exit": "2026-05-15",
+      "stock_return": -0.005471361015024434,
+      "benchmark_return": -0.03803990555455361,
+      "excess": 0.032568544539529176
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 1,
+      "date": "2026-08-12",
+      "period": "2026-06-30",
+      "growth": 0.5625,
+      "source": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11:54:46.695Z",
+      "entry": "2026-08-13",
+      "exit": "2026-08-14",
+      "stock_return": 0.08877038890229394,
+      "benchmark_return": -0.002206660449048492,
+      "excess": 0.09097704935134243
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2025-09-02",
+      "value": 5000000000.0,
+      "excess": 0.255715187643625,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-10",
+          "stock_return": 0.303293312964513,
+          "benchmark_return": 0.05027400908703816,
+          "excess": 0.25301930387747484
+        },
+        "NBIS": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-10",
+          "stock_return": 0.42254375048010573,
+          "benchmark_return": 0.05027400908703816,
+          "excess": 0.37226974139306757
+        },
+        "IREN": {
+          "entry": "2025-09-03",
+          "exit": "2025-09-10",
+          "stock_return": 0.19213052674737074,
+          "benchmark_return": 0.05027400908703816,
+          "excess": 0.14185651766033258
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2026-02-12",
+      "value": 14000000000.0,
+      "excess": -0.020755858133898835,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-23",
+          "stock_return": -0.05414415376995274,
+          "benchmark_return": 0.012655753082165377,
+          "excess": -0.06679990685211812
+        },
+        "NBIS": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-23",
+          "stock_return": 0.026527889168976637,
+          "benchmark_return": 0.012655753082165377,
+          "excess": 0.01387213608681126
+        },
+        "IREN": {
+          "entry": "2026-02-13",
+          "exit": "2026-02-23",
+          "stock_return": 0.0033159494457757344,
+          "benchmark_return": 0.012655753082165377,
+          "excess": -0.009339803636389643
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2026-04-06",
+      "value": 30000000000.0,
+      "excess": 0.22962863592991178,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-14",
+          "stock_return": 0.3749413407488711,
+          "benchmark_return": 0.13028258789371705,
+          "excess": 0.24465875285515404
+        },
+        "NBIS": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-14",
+          "stock_return": 0.37938671496276966,
+          "benchmark_return": 0.13028258789371705,
+          "excess": 0.2491041270690526
+        },
+        "IREN": {
+          "entry": "2026-04-07",
+          "exit": "2026-04-14",
+          "stock_return": 0.32540561575924576,
+          "benchmark_return": 0.13028258789371705,
+          "excess": 0.1951230278655287
+        }
+      },
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2026-05-28",
+      "value": 47000000000.0,
+      "excess": -0.0319377493470584,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-05",
+          "stock_return": -0.08344745267518494,
+          "benchmark_return": -0.04882038066543026,
+          "excess": -0.03462707200975468
+        },
+        "NBIS": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-05",
+          "stock_return": -0.014193599166019255,
+          "benchmark_return": -0.04882038066543026,
+          "excess": 0.03462678149941101
+        },
+        "IREN": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-05",
+          "stock_return": -0.14463333819626178,
+          "benchmark_return": -0.04882038066543026,
+          "excess": -0.09581295753083152
+        }
+      },
+      "source": "https://www.anthropic.com/news/series-h"
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2025-08-07",
+      "period": null,
+      "growth": 1.06,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-15",
+      "stock_return": 0.04129113139996177,
+      "benchmark_return": 0.007222464698799724,
+      "excess": 0.03406866670116204
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2025-11-11",
+      "period": null,
+      "growth": 0.39,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-19",
+      "stock_return": 0.007524364983892973,
+      "benchmark_return": -0.045256322419341855,
+      "excess": 0.05278068740323483
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2025-05-20",
+      "period": "2025-03-31",
+      "growth": 1.7666666666666666,
+      "source": "https://assets.nebius.com/assets/2ebc1a9b-61e9-4398-bbdb-e8a24a50efe6/Nebius%20Group_Letter%20to%20shareholders_Q12025.pdf?cache-buster=2025-06-11T17:44:46.519Z",
+      "entry": "2025-05-21",
+      "exit": "2025-05-29",
+      "stock_return": -0.022610413535942286,
+      "benchmark_return": 0.010808772119988097,
+      "excess": -0.033419185655930383
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2025-08-07",
+      "period": "2025-06-30",
+      "growth": 0.7269076305220883,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-08-15",
+      "stock_return": 0.04129113139996177,
+      "benchmark_return": 0.007222464698799724,
+      "excess": 0.03406866670116204
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2025-11-11",
+      "period": "2025-09-30",
+      "growth": 0.2813953488372094,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-11-19",
+      "stock_return": 0.007524364983892973,
+      "benchmark_return": -0.045256322419341855,
+      "excess": 0.05278068740323483
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2026-02-12",
+      "period": "2025-12-31",
+      "growth": 1.2686025408348458,
+      "source": "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf?cache-buster=2026-02-12T11:43:13.446Z",
+      "entry": "2026-02-13",
+      "exit": "2026-02-23",
+      "stock_return": 0.026527889168976637,
+      "benchmark_return": 0.012655753082165377,
+      "excess": 0.01387213608681126
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2026-05-13",
+      "period": "2026-03-31",
+      "growth": 0.536,
+      "source": "https://assets.nebius.com/assets/4f7f76ee-aa57-41d9-935b-cac74898469d/Nebius%20SHL_Q1%202026.pdf?cache-buster=2026-05-13T12:52:30.293Z&_gl=1*o9sc01*_gcl_aw*R0NMLjE3Nzg1ODAxNjkuQ2p3S0NBanduNHZRQmhCc0Vpd0FxM2hoTjlhM2pLZUNqYmFKNEhjRTZYN080QlpUc2pyc0dNVTVyQi1nbzROckw4aEdsNnJ4eW9XMGJSb0MzUmdRQXZEX0J3RQ..*_gcl_au*OTMxOTg0ODM4LjE3NzY3NjM1OTcuMzIwNTc3NzU3LjE3NzgxNDQ3MTQuMTc3ODE0NDcxNA..",
+      "entry": "2026-05-14",
+      "exit": "2026-05-21",
+      "stock_return": -0.005516623352357808,
+      "benchmark_return": -0.018086283997199915,
+      "excess": 0.012569660644842107
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 5,
+      "date": "2026-08-12",
+      "period": "2026-06-30",
+      "growth": 0.5625,
+      "source": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11:54:46.695Z",
+      "entry": "2026-08-13",
+      "exit": "2026-08-20",
+      "stock_return": -0.13695888329401273,
+      "benchmark_return": -0.04493137378210976,
+      "excess": -0.09202750951190297
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2025-09-02",
+      "value": 5000000000.0,
+      "excess": 0.4865793394324713,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2025-09-03",
+          "exit": "2025-10-01",
+          "stock_return": 0.5248109394723648,
+          "benchmark_return": 0.16499669111423088,
+          "excess": 0.3598142483581339
+        },
+        "NBIS": {
+          "entry": "2025-09-03",
+          "exit": "2025-10-01",
+          "stock_return": 0.7610052996690133,
+          "benchmark_return": 0.16499669111423088,
+          "excess": 0.5960086085547824
+        },
+        "IREN": {
+          "entry": "2025-09-03",
+          "exit": "2025-10-01",
+          "stock_return": 0.6689118524987283,
+          "benchmark_return": 0.16499669111423088,
+          "excess": 0.5039151613844974
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2026-02-12",
+      "value": 14000000000.0,
+      "excess": 0.1282773008682023,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-02-13",
+          "exit": "2026-03-16",
+          "stock_return": -0.10599750320837331,
+          "benchmark_return": -0.033846727537653165,
+          "excess": -0.07215077567072015
+        },
+        "NBIS": {
+          "entry": "2026-02-13",
+          "exit": "2026-03-16",
+          "stock_return": 0.3248648431108967,
+          "benchmark_return": -0.033846727537653165,
+          "excess": 0.35871157064854986
+        },
+        "IREN": {
+          "entry": "2026-02-13",
+          "exit": "2026-03-16",
+          "stock_return": 0.06442438008912399,
+          "benchmark_return": -0.033846727537653165,
+          "excess": 0.09827110762677715
+        }
+      },
+      "source": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2026-04-06",
+      "value": 30000000000.0,
+      "excess": 0.20309352222944232,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-04-07",
+          "exit": "2026-05-05",
+          "stock_return": 0.5003519778829897,
+          "benchmark_return": 0.3070517889947919,
+          "excess": 0.19330018888819778
+        },
+        "NBIS": {
+          "entry": "2026-04-07",
+          "exit": "2026-05-05",
+          "stock_return": 0.4984667451658136,
+          "benchmark_return": 0.3070517889947919,
+          "excess": 0.19141495617102167
+        },
+        "IREN": {
+          "entry": "2026-04-07",
+          "exit": "2026-05-05",
+          "stock_return": 0.5316172106238994,
+          "benchmark_return": 0.3070517889947919,
+          "excess": 0.22456542162910753
+        }
+      },
+      "source": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "hypothesis": "H1",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2026-05-28",
+      "value": 47000000000.0,
+      "excess": -0.14697681385711683,
+      "members": [
+        "CRWV",
+        "NBIS",
+        "IREN"
+      ],
+      "legs": {
+        "CRWV": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-29",
+          "stock_return": -0.12800143156503385,
+          "benchmark_return": 0.055181721064451184,
+          "excess": -0.18318315262948504
+        },
+        "NBIS": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-29",
+          "stock_return": 0.1300791814226403,
+          "benchmark_return": 0.055181721064451184,
+          "excess": 0.07489746035818912
+        },
+        "IREN": {
+          "entry": "2026-05-29",
+          "exit": "2026-06-29",
+          "stock_return": -0.2774630282356034,
+          "benchmark_return": 0.055181721064451184,
+          "excess": -0.3326447493000546
+        }
+      },
+      "source": "https://www.anthropic.com/news/series-h"
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2025-08-07",
+      "period": null,
+      "growth": 1.06,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-09-08",
+      "stock_return": -0.068624619140352,
+      "benchmark_return": 0.010186310658905295,
+      "excess": -0.0788109297992573
+    },
+    {
+      "hypothesis": "H2",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2025-11-11",
+      "period": null,
+      "growth": 0.39,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-12-11",
+      "stock_return": -0.0008478362710598875,
+      "benchmark_return": 0.04320317372272764,
+      "excess": -0.04405100999378753
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2025-05-20",
+      "period": "2025-03-31",
+      "growth": 1.7666666666666666,
+      "source": "https://assets.nebius.com/assets/2ebc1a9b-61e9-4398-bbdb-e8a24a50efe6/Nebius%20Group_Letter%20to%20shareholders_Q12025.pdf?cache-buster=2025-06-11T17:44:46.519Z",
+      "entry": "2025-05-21",
+      "exit": "2025-06-20",
+      "stock_return": 0.23252835245452053,
+      "benchmark_return": 0.07785639986080017,
+      "excess": 0.15467195259372035
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2025-08-07",
+      "period": "2025-06-30",
+      "growth": 0.7269076305220883,
+      "source": "https://assets.nebius.com/assets/626c36f7-30d7-42e6-a804-abf499ded108/Nebius%20-%20Letter%20to%20shareholders%20-%20Q2%202025.pdf",
+      "entry": "2025-08-08",
+      "exit": "2025-09-08",
+      "stock_return": -0.068624619140352,
+      "benchmark_return": 0.010186310658905295,
+      "excess": -0.0788109297992573
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2025-11-11",
+      "period": "2025-09-30",
+      "growth": 0.2813953488372094,
+      "source": "https://assets.nebius.com/assets/ddbb0026-e8e4-425d-8459-6570f3026646/Shareholder%20Letter%20Q3.pdf?cache-buster=2025-11-11T15:38:44.881Z",
+      "entry": "2025-11-12",
+      "exit": "2025-12-11",
+      "stock_return": -0.0008478362710598875,
+      "benchmark_return": 0.04320317372272764,
+      "excess": -0.04405100999378753
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2026-02-12",
+      "period": "2025-12-31",
+      "growth": 1.2686025408348458,
+      "source": "https://assets.nebius.com/assets/e59fb92e-9027-473a-8cac-04f9d2e9ea9a/Shareholder%20Letter%20Q4%202025.pdf?cache-buster=2026-02-12T11:43:13.446Z",
+      "entry": "2026-02-13",
+      "exit": "2026-03-16",
+      "stock_return": 0.3248648431108967,
+      "benchmark_return": -0.033846727537653165,
+      "excess": 0.35871157064854986
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2026-05-13",
+      "period": "2026-03-31",
+      "growth": 0.536,
+      "source": "https://assets.nebius.com/assets/4f7f76ee-aa57-41d9-935b-cac74898469d/Nebius%20SHL_Q1%202026.pdf?cache-buster=2026-05-13T12:52:30.293Z&_gl=1*o9sc01*_gcl_aw*R0NMLjE3Nzg1ODAxNjkuQ2p3S0NBanduNHZRQmhCc0Vpd0FxM2hoTjlhM2pLZUNqYmFKNEhjRTZYN080QlpUc2pyc0dNVTVyQi1nbzROckw4aEdsNnJ4eW9XMGJSb0MzUmdRQXZEX0J3RQ..*_gcl_au*OTMxOTg0ODM4LjE3NzY3NjM1OTcuMzIwNTc3NzU3LjE3NzgxNDQ3MTQuMTc3ODE0NDcxNA..",
+      "entry": "2026-05-14",
+      "exit": "2026-06-12",
+      "stock_return": 0.05068960896790409,
+      "benchmark_return": 0.07196457651994503,
+      "excess": -0.021274967552040946
+    },
+    {
+      "hypothesis": "H3",
+      "benchmark": "SMH",
+      "horizon": 20,
+      "date": "2026-08-12",
+      "period": "2026-06-30",
+      "growth": 0.5625,
+      "source": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11:54:46.695Z",
+      "entry": "2026-08-13",
+      "exit": "2026-09-11",
+      "stock_return": -0.11954983938604435,
+      "benchmark_return": -0.034950376817912576,
+      "excess": -0.08459946256813178
+    }
+  ],
+  "overlapping_20d_windows": [],
+  "exclusions": [
+    "2024Q3 NBIS ARR >120M is a lower bound, excluded from exact growth regressions; 2024Q4 retained as baseline.",
+    "2024Q2 NBIS before trading resumption excluded.",
+    "Anthropic repeat >30B disclosure not counted twice; old $1B/$9B not backdated.",
+    "H2 group perimeter changes prevent stitched quarterly series; only explicit comparable QoQ figures admitted.",
+    "H3 six growth events provide no credible train/validation/test split; halves diagnostic only.",
+    "No automated causal attribution, timing alpha, or transaction-cost-adjusted trading claim.",
+    "Anthropic sitemap URL keyword discovery is not exhaustive; sample is retrieved source cohort, not all historic ARR disclosures."
+  ],
+  "h1_earnings_confound_sensitivity": {
+    "note": "Post-design diagnostic: remove Anthropic dates coincident with known NBIS quarterly release. Other confounders remain.",
+    "excluded_dates": [
+      "2026-02-12"
+    ],
+    "summary": {
+      "n": 3,
+      "mean": 0.18118494440081565,
+      "median": 0.28734233510085083,
+      "positive": 2,
+      "inference": "descriptive only; n<6",
+      "leave_one_out_mean": [
+        0.1258097226089102,
+        0.28963886154273866
+      ]
+    }
+  }
+}
