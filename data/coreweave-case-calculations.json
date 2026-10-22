@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-10-22",
+  "financial_period": "2026-06-30",
+  "unit": "USD unless ratio",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001769628.json",
+  "accession": "0001769628-26-000366",
+  "raw": {
+    "cash": 5524000000,
+    "debt_carrying": 35551000000,
+    "q2_revenue": 2575000000,
+    "q2_prior_revenue": 1212000000,
+    "h1_revenue": 4653000000,
+    "h1_cfo": 3663000000,
+    "h1_cash_ppe": 14117000000,
+    "q2_ebit": -49000000,
+    "q2_net_interest_expense": 640000000,
+    "q2_net_loss": -626000000,
+    "h1_debt_proceeds": 16747000000,
+    "h1_debt_repaid": 5219000000,
+    "rpo": 103700000000
+  },
+  "derived": {
+    "q2_revenue_yoy": 1.1245874587458746,
+    "q2_revenue_qoq": 0.23917228103946098,
+    "h1_cfo_less_cash_ppe": -10454000000,
+    "h1_cfo_ppe_coverage": 0.25947439257632643,
+    "h1_net_debt_proceeds_before_fees": 11528000000,
+    "q2_ebit_margin": -0.019029126213592235,
+    "q2_net_interest_to_revenue": 0.24854368932038834,
+    "illustrative_5y_risk_neutral_pd_1067bp_recovery40pct": 0.5890018914919416
+  },
+  "notes": [
+    "Cash PP&E is not identical to all-in capital expenditure guidance.",
+    "CFO already includes operating cash interest under US GAAP; do not subtract net interest expense again.",
+    "Q2 operating CFO = H1 3.663B - Q1 2.984B = 0.679B; not cash available before interest.",
+    "Do not interpret XBRL annual debt maturity buckets as rolling next-12-month maturities without inspecting footnote.",
+    "CDS observations are dated media reports, not live first-party quotes.",
+    "Later facilities/convertible pricing headlines cannot be added to June cash; need drawdown/closing/use-of-proceeds reconciliation."
+  ]
+}
